@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { ListComponent } from './list/list.component';
 import { FooterComponent } from './footer/footer.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { LoginComponent } from './login/login.component';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { QuizComponent } from './quiz/quiz.component';
     HeaderComponent,
     ListComponent,
     FooterComponent,
-    QuizComponent
+    QuizComponent,
+    LoginComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
