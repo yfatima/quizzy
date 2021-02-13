@@ -1,3 +1,27 @@
 <div>
-    Quiz Page
+    {{questions[0].name}}
+    
+    <ul>
+      <div *ngFor="let question of questions; let i = index">
+      <div *ngIf="i == count">
+       {{question.question}}
+      	<div class="container">
+  			<div class="row">
+    			<div class="col">{{question.option1}}</div>
+    			<div class="col">{{question.option2}}</div>
+    			<div class="w-100"></div>
+   		    	<div class="col">{{question.option3}}</div>
+    			<div class="col">{{question.option4}}</div>
+  			</div>
+		</div>
+	</div>
+      </div>
+  	</ul>
+  	
+  	<div class="container-fluid">
+  	
+  	<input class="btn btn-primary" type="button" value="Back" (click)="prevQuestion()">
+	<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()">
+	<input class="btn btn-primary" type="reset" value="Save">
+  	</div>
 </div>

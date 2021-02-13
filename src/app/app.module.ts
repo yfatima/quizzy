@@ -11,6 +11,8 @@ import { QuizComponent } from './quiz/quiz.component';
 import { LoginComponent } from './login/login.component';
 import { ResultComponent } from './result/result.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { ResultComponent } from './result/result.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

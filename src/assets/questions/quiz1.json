@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Starbucks Drink Quiz",
+        "question": "What is your favorite season?",
+        "optionCount": 4,
+		"option1": "Spring",
+		"option2": "Summer",
+		"option3": "Fall/Autumn",
+		"option4": "Winter"
+    },
+    {
+        "id": 2,
+        "name": "Starbucks Drink Quiz",
+        "question": "What is your favorite vacation place?",
+        "optionCount": 4,
+		"option1": "Bali",
+		"option2": "Iceland",
+		"option3": "Italy",
+		"option4": "New York City"		
+    },
+    {
+        "id": 3,
+        "name": "Starbucks Drink Quiz",
+        "question": "What material would you like the most?",
+        "optionCount": 4,
+		"option1": "Wood",
+		"option2": "Metal",
+		"option3": "Copper",
+		"option4": "Glass"
+    }
+]
