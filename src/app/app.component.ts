@@ -25,9 +25,10 @@ import { Component } from '@angular/core';
       </li>
     </ul>
     <router-outlet></router-outlet>
+    <app-footer></app-footer>
   `,
   styles: []
 })
 export class AppComponent {
-  title = 'quizzy';
+  title = 'quizzie';
 }
