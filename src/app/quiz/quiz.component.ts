@@ -6,7 +6,25 @@ import { HttpClient } from "@angular/common/http";
   templateUrl: './quiz.component.html',
   styles: [
   `
+  .btn-image {
+    background-image: url('https://brandflow.net/assets/img/featured/mdb-prolog.jpg') !important;
+    background-size: contain; //or cover
+	}
+	
+	.options {
+		color:white;
+		width: 100%;
+		height: 100%;
+		padding: 10%;
+	}
+	
+	.questionborder {
+		padding: 1rem;
+	}
 
+	.btn {
+		margin: 2px !important;
+	}
   `
   ]
 })

@@ -1,27 +1,36 @@
-<div>
-    {{questions[0].name}}
+<div  class="container-lg"> 
+    <p class="text-center">{{questions[0].name}}</p>
     
     <ul>
       <div *ngFor="let question of questions; let i = index">
       <div *ngIf="i == count">
-       {{question.question}}
-      	<div class="container">
-  			<div class="row">
-    			<div class="col">{{question.option1}}</div>
-    			<div class="col">{{question.option2}}</div>
+      	<div class="container border rounded questionborder">
+      		<p class="text-center">{{question.question}}</p>
+      		
+  			<div class="row justify-content-center">
+    			<div class="card" style="width: 30rem; margin: 0.5rem;">
+    			<button type="button" class="btn btn-image options">{{question.option1}}</button>
+    			</div>
+    			<div class="card" style="width: 30rem; margin: 0.5rem;">
+    			<button type="button" class="btn btn-image options">{{question.option2}}</button>
+    			</div>
     			<div class="w-100"></div>
-   		    	<div class="col">{{question.option3}}</div>
-    			<div class="col">{{question.option4}}</div>
+   		    	<div class="card" style="width: 30rem; margin: 0.5rem;">
+   		    	<button type="button" class="btn btn-image options">{{question.option3}}</button>
+   		    	</div>
+    			<div class="card" style="width: 30rem; margin: 0.5rem;">
+    			<button type="button" class="btn btn-image options">{{question.option4}}</button>
+    			</div>
   			</div>
 		</div>
 	</div>
       </div>
   	</ul>
   	
-  	<div class="container-fluid">
+  	<div class="row justify-content-center">
   	
   	<input class="btn btn-primary" type="button" value="Back" (click)="prevQuestion()">
 	<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()">
-	<input class="btn btn-primary" type="reset" value="Save">
+	<input class="btn btn-primary" type="reset" value="Save" routerLink="/home">
   	</div>
 </div>
