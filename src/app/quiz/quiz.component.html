@@ -1,25 +1,25 @@
-<div  class="container-lg"> 
-    <p class="text-center">{{questions[0].name}}</p>
+<div  class="container-fluid"> 
+    <!--<h1 class="text-center">{{questions.Starbucks[0].name}}</h1>-->
     
     <ul>
-      <div *ngFor="let question of questions; let i = index">
+      <div *ngFor="let question of questions.Starbucks; let i = index">
       <div *ngIf="i == count">
       	<div class="container border rounded questionborder">
-      		<p class="text-center">{{question.question}}</p>
+      		<h2 class="text-center">{{question.question}}</h2>
       		
   			<div class="row justify-content-center">
-    			<div class="card" style="width: 30rem; margin: 0.5rem;">
-    			<button type="button" class="btn btn-image options">{{question.option1}}</button>
+    			<div class="card btn-image" style="background-image: url({{question.op1url}}) !important;">
+    			<button type="button" class="btn options">{{question.option1}}</button>
     			</div>
-    			<div class="card" style="width: 30rem; margin: 0.5rem;">
-    			<button type="button" class="btn btn-image options">{{question.option2}}</button>
+    			<div class="card btn-image" style="background-image: url({{question.op2url}}) !important;">
+    			<button type="button" class="btn options">{{question.option2}}</button>
     			</div>
     			<div class="w-100"></div>
-   		    	<div class="card" style="width: 30rem; margin: 0.5rem;">
-   		    	<button type="button" class="btn btn-image options">{{question.option3}}</button>
+   		    	<div class="card btn-image" style="background-image: url({{question.op3url}}) !important;">
+   		    	<button type="button" class="btn options">{{question.option3}}</button>
    		    	</div>
-    			<div class="card" style="width: 30rem; margin: 0.5rem;">
-    			<button type="button" class="btn btn-image options">{{question.option4}}</button>
+    			<div class="card btn-image" style="background-image: url({{question.op4url}}) !important;">
+    			<button type="button" class="btn options">{{question.option4}}</button>
     			</div>
   			</div>
 		</div>
@@ -31,6 +31,11 @@
   	
   	<input class="btn btn-primary" type="button" value="Back" (click)="prevQuestion()">
 	<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()">
-	<input class="btn btn-primary" type="reset" value="Save" routerLink="/home">
+	<div *ngIf="count != 2">
+		<input class="btn btn-primary" type="reset" value="Save" routerLink="/home">
+	</div>
+	<div *ngIf="count == 2">
+		<input class="btn btn-primary" type="submit" value="Done" routerLink="/result">
+	</div>
   	</div>
 </div>

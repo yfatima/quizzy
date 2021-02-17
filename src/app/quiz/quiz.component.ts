@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
 @Component({
@@ -7,8 +7,11 @@ import { HttpClient } from "@angular/common/http";
   styles: [
   `
   .btn-image {
-    background-image: url('https://brandflow.net/assets/img/featured/mdb-prolog.jpg') !important;
-    background-size: contain; //or cover
+    width: 25rem; 
+    height: 15rem;
+    margin: 0.5rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100% !important;
 	}
 	
 	.options {
@@ -16,6 +19,7 @@ import { HttpClient } from "@angular/common/http";
 		width: 100%;
 		height: 100%;
 		padding: 10%;
+		font-weight: bold;
 	}
 	
 	.questionborder {
