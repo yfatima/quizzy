@@ -31,10 +31,10 @@
   	
   	<input class="btn btn-primary" type="button" value="Back" (click)="prevQuestion()">
 	<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()">
-	<div *ngIf="count != 2">
+	<div *ngIf="count != 4">
 		<input class="btn btn-primary" type="reset" value="Save" routerLink="/home">
 	</div>
-	<div *ngIf="count == 2">
+	<div *ngIf="count == 4">
 		<input class="btn btn-primary" type="submit" value="Done" routerLink="/result">
 	</div>
   	</div>
