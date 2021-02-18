@@ -23,7 +23,14 @@ import { HttpClient } from "@angular/common/http";
 	}
 	
 	.questionborder {
-		padding: 1rem;
+		padding: 0.5rem;
+		margin-top: 1rem;
+	}
+	
+	.quizborder {
+		padding: 2rem;
+		margin-top: 1rem;
+		height: 500px !important;
 	}
 
 	.btn {
@@ -36,6 +43,8 @@ export class QuizComponent implements OnInit {
 
   questions: any = [];
   count: number = 0;
+  progressPercentage: number = 15;
+  started: boolean = false;
 
   constructor(
   		private httpClient: HttpClient
@@ -55,6 +64,7 @@ export class QuizComponent implements OnInit {
   	if (this.count != 4) {
   		this.count++;
   	}
+  	this.progressPercentage = this.progressPercentage + 25;
   	
   
   }
@@ -63,6 +73,11 @@ export class QuizComponent implements OnInit {
   	if ( this.count != 0) {
   		this.count--;
   	}
+  	this.progressPercentage = this.progressPercentage - 25;
+  }
+  
+  startQuiz() {
+  	this.started = true;
   }
 
 
