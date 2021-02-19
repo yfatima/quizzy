@@ -1,3 +1,10 @@
-<div>
-    List Page
+<div class="container popular-list">
+    <h4 class="text-center topic-header">
+        Popular Quizzes
+    </h4>
+    <div class="row">
+        <div class="col-md-6 text-center mt-5 quiz-item" *ngFor="let data of quizData">
+            <a href="#{{ data.type }}">{{ data.type }}</a>
+        </div>
+    </div>
 </div>
