@@ -1,6 +1,12 @@
-.btn {
-    border-radius: 0
+.welcome{
+    padding-top: 100px;
 }
 
-.quizzie-img{
+.popular-list{
+    margin-top: 200px;
 }
+
+.btn-lg{
+    padding: 15px 30px;
+}
+
