@@ -8,5 +8,10 @@
         "type": "Starbucks drink",
         "question_prompt": "What is your recommended drink?",
         "question_1": "What is your favorite flavor?"
+    },
+    {
+        "type": "Major",
+        "quetsion_prompt": "What is your recommened major?",
+        "quetsion_1": "What???"
     }
 ]
