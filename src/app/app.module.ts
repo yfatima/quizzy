@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { LoginComponent } from './login/login.component';
 import { ResultComponent } from './result/result.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ResultComponent } from './result/result.component';
     FooterComponent,
     QuizComponent,
     LoginComponent,
-    ResultComponent
+    ResultComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { ListComponent } from './list/list.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { LoginComponent } from './login/login.component';
 import { ResultComponent } from './result/result.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   { path:'', redirectTo: 'home', pathMatch: 'full' },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path:'list', component: ListComponent},
   { path:'quiz', component: QuizComponent},
   { path:'result', component: ResultComponent},
-  { path:'login', component: LoginComponent}
+  { path:'login', component: LoginComponent},
+  { path:'signup', component: SignupComponent}
 ];
 
 @NgModule({
