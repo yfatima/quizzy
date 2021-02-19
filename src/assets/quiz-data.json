@@ -1,0 +1,12 @@
+[
+    {
+        "type": "Ice cream",
+        "question_prompt": "What is your recommended ice cream?",
+        "question_1": "What is your favorite flavor?"
+    },
+    {
+        "type": "Starbucks drink",
+        "question_prompt": "What is your recommended drink?",
+        "question_1": "What is your favorite flavor?"
+    }
+]
