@@ -25,17 +25,24 @@ import { HttpClient } from "@angular/common/http";
 	.questionborder {
 		padding: 0.5rem;
 		margin-top: 1rem;
+		border-width: medium !important;
 	}
 	
 	.quizborder {
 		padding: 2rem;
 		margin-top: 1rem;
 		height: 500px !important;
+		border-width: medium !important;
 	}
 
 	.btn {
 		margin: 2px !important;
 	}
+
+	.picked {
+    	background-color: black;
+    	opacity: 0.5;
+	}	
   `
   ]
 })
@@ -45,6 +52,10 @@ export class QuizComponent implements OnInit {
   count: number = 0;
   progressPercentage: number = 15;
   started: boolean = false;
+  pickedAnswers: [number, string][] = [];
+  
+  toggle = [true, true, true, true, true];
+  prevToggleIndex: number = 0;
 
   constructor(
   		private httpClient: HttpClient
@@ -65,6 +76,7 @@ export class QuizComponent implements OnInit {
   		this.count++;
   	}
   	this.progressPercentage = this.progressPercentage + 25;
+  	this.toggle = [true, true, true, true, true];
   	
   
   }
@@ -74,10 +86,28 @@ export class QuizComponent implements OnInit {
   		this.count--;
   	}
   	this.progressPercentage = this.progressPercentage - 25;
+  	this.toggle = [true, true, true, true, true];
   }
   
   startQuiz() {
   	this.started = true;
+  }
+  
+  saveOption (value : string, id: number) {
+  	
+  	this.toggle[this.prevToggleIndex] = true;
+  	this.toggle[id-1] = !this.toggle[id-1];
+  	this.prevToggleIndex = id-1;
+  
+  	if (this.pickedAnswers[this.count] == undefined) {
+  		 this.pickedAnswers.push([this.count+1, value]);
+  	}
+  	else {
+  	
+  		this.pickedAnswers[this.count][1] = value;
+  	}
+   
+  	console.log(this.pickedAnswers);
   }
 
 

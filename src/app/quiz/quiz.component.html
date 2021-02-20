@@ -15,17 +15,34 @@
       		
   			<div class="row justify-content-center">
     			<div class="card btn-image" style="background-image: url({{question.op1url}}) !important;">
-    			<button type="button" class="btn options">{{question.option1}}</button>
+    			<button 
+    			type="button" class="btn options" 
+    			(click)="saveOption(question.option1, 1)"
+    			[ngClass]="{'picked': !toggle[0]}">
+    				{{question.option1}}
+    			</button>
     			</div>
     			<div class="card btn-image" style="background-image: url({{question.op2url}}) !important;">
-    			<button type="button" class="btn options">{{question.option2}}</button>
+    			<button type="button" class="btn options" 
+    			(click)="saveOption(question.option2, 2)"
+    			[ngClass]="{'picked': !toggle[1]}">
+    				{{question.option2}}
+    			</button>
     			</div>
     			<div class="w-100"></div>
    		    	<div class="card btn-image" style="background-image: url({{question.op3url}}) !important;">
-   		    	<button type="button" class="btn options">{{question.option3}}</button>
+   		    	<button type="button" class="btn options" 
+   		    	(click)="saveOption(question.option3, 3)"
+   		    	[ngClass]="{'picked': !toggle[2]}">
+   		    		{{question.option3}}
+   		    	</button>
    		    	</div>
     			<div class="card btn-image" style="background-image: url({{question.op4url}}) !important;">
-    			<button type="button" class="btn options">{{question.option4}}</button>
+    			<button type="button" class="btn options" 
+    			(click)="saveOption(question.option4, 4)"
+    			[ngClass]="{'picked': !toggle[3]}">
+    				{{question.option4}}
+    			</button>
     			</div>
   			</div>
 		</div>
