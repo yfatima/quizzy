@@ -13,7 +13,7 @@
                     </h5>
                 </div>
                 <div class="row mt-5 col-6">
-                    <a href="/list" class="btn btn-lg" role="button" aria-pressesd="true"><h5>Get started</h5></a>
+                    <a href="/list" class="btn btn-lg" role="button" aria-pressesd="true">Get started</a>
                 </div>
             </div>
             <div class="col-sm-4 quizzie-img">
@@ -23,13 +23,14 @@
     </div>
 </div>
 
-
-<div class="container popular-list mx-auto text-center" style="width: 250px">
-    <h4>Popular quizzes</h4>
-</div>
-<div  class="container mt-5">
+<div  class="container mt-5 list">
     <div class="row justify-content-center">
-        <div class="col-md-4 text-center" *ngFor="let data of quizData">
+        <div class="col-md-12 text-center list-header">
+            <strong>Popular Quizzes</strong>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center list-item" *ngFor="let data of quizData">
            <a href='#'>{{data.type}}</a>
         </div>
     <div>

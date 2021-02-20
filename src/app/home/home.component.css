@@ -13,12 +13,26 @@
 .btn{
     background-color: #18cafe;
     color: white;
+    padding: 15px 30px;
 }
 
 .btn:hover{
     background-color: #01a3d1;
 }
 
-.btn-lg{
-    padding: 15px 30px;
+.list{
+    background-color: #eaf8f9;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    border-radius: 6px;
+}
+
+.list-header{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: 35px;
+}
+
+.list-item{
+    font-size: 20px;
 }
