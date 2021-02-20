@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
   styles: [
     `
     .main{
-      margin-top: 75px;
+      margin-top: 63px;
     }
     `
   ]
