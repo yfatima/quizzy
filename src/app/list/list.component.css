@@ -1,7 +1,16 @@
-.topic-header{
-    font-size: 45px;
+.list{
+    background-color: #eaf8f9;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    border-radius: 6px;
 }
 
-.quiz-item{
+.list-header{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: 35px;
+}
+
+.list-item{
     font-size: 20px;
 }
