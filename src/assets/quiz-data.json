@@ -11,7 +11,7 @@
     },
     {
         "type": "Major",
-        "quetsion_prompt": "What is your recommened major?",
+        "question_prompt": "What is your recommended major?",
         "quetsion_1": "What???"
     }
 ]
