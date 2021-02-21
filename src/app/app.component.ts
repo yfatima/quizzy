@@ -13,6 +13,7 @@ import { Component } from '@angular/core';
     `
     .main{
       margin-top: 60px;
+      margin-bottom: 120px;
     }
     `
   ]
