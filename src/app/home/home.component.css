@@ -1,8 +1,14 @@
 .welcome{
-    padding-top: 120px;
-    padding-bottom: 200px;
+    padding-top: 40px;
+    padding-bottom: 100px;
     background-color: #006BE1;
     color: white;
+}
+
+
+.quizzie-img{
+    max-width: 100%;
+    height: auto;
 }
 
 .popular-list{
@@ -34,4 +40,5 @@
 
 .list-item{
     font-size: 20px;
+    margin-bottom: 20px;
 }
