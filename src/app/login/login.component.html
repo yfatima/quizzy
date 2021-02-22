@@ -1,33 +1,5 @@
 
-<div class="title">
+<div class="container">
 
     <h1> Log in</h1>
-    <button type="button" class="close exitlogin" aria-label="Close" (click)="close()">
-  		<span aria-hidden="true">&times;</span>
-	</button>
-
-</div>
-
-<div class="container">
-<div class="row justify-content-around">
-
-<div class="login">
-<form class="form-group form-group-lg" [formGroup]="profileForm">
-  
-  <label for="inputlg">
-    Username:
-    <input class="form-control input-lg" type="text" placeholder="Type your username" formControlName="username">
-  </label><br>
-
-  <label for="inputlg">
-    Password:
-    <input class="form-control input-lg" type="text" placeholder="Type your password" formControlName="password">
-  </label><br>
-  
-</form>
-</div>
-</div>
-<div class="row justify-content-around">
-  <input class="btn btn-primary libtn" type="submit" value="Log in" (click)="submitLogin()">
-</div>
 </div>

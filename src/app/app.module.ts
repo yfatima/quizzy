@@ -17,6 +17,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+
+const config = {
+  apiKey: "AIzaSyBhYP0CoN8ikIY1BTG8myLQZlN6xa-sm4g",
+  authDomain: "quizzy-3eb2f.firebaseapp.com",
+  databaseURL: "https://quizzy-3eb2f-default-rtdb.firebaseio.com",
+  projectId: "quizzy-3eb2f",
+  storageBucket: "quizzy-3eb2f.appspot.com",
+  messagingSenderId: "828953244611",
+  appId: "1:828953244611:web:b874cb3577602975808376",
+  measurementId: "G-SCZZXWSYYC"
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,10 +52,13 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     MatDialogModule,
     NoopAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(config),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [LoginComponent]
+  entryComponents: [SignupComponent]
 })
 export class AppModule { }

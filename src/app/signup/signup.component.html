@@ -1,0 +1,38 @@
+
+<div class="title">
+
+    <h2>Sign up</h2>
+    <button type="button" class="close exitlogin" aria-label="Close" (click)="close()">
+  		<span aria-hidden="true">&times;</span>
+	</button>
+
+</div>
+
+<div class="container">
+<div class="row justify-content-around">
+
+<div class="login">
+<form class="form-group form-group-lg" [formGroup]="profileForm1">
+  
+  <label for="inputlg">
+    Username:
+    <input class="form-control input-lg" type="text" placeholder="Type your username" formControlName="username">
+  </label><br>
+
+  <label for="inputlg">
+    Email:
+    <input class="form-control input-lg" type="text" placeholder="Type your email" formControlName="email">
+  </label><br>
+
+  <label for="inputlg">
+    Password:
+    <input class="form-control input-lg" type="text" placeholder="Type your password" formControlName="password">
+  </label><br>
+  
+</form>
+</div>
+</div>
+<div class="row justify-content-around">
+  <input class="btn btn-primary libtn" type="submit" value="Sign up" (click)="submitSignup()">
+</div>
+</div>

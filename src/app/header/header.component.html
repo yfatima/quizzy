@@ -16,11 +16,17 @@
         </ul>
         
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" (click)="onLogin()">Log In</a>
-            </li>
+        
+        		<!-- template will replace this div -->
+        		<li class="nav-item active" *ngIf="!auth.getStatus()">
+                	<a class="nav-link" (click)="auth.googleSignin()">Log In</a>
+            	</li>
+            	<li class="nav-item active" *ngIf="auth.getStatus()">
+                	<a class="nav-link" (click)="auth.signOut()">Log out</a>
+            	</li>
+           
             <li>
-                <a class="nav-link" routerLink="/signup">Sign Up</a>
+                <a class="nav-link" (click)="onSignup()">Sign Up</a>
             </li>
         </ul>
     </div>
