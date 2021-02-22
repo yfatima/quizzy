@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-quiz',
@@ -48,67 +49,81 @@ import { HttpClient } from "@angular/common/http";
 })
 export class QuizComponent implements OnInit {
 
-  questions: any = [];
-  count: number = 0;
-  progressPercentage: number = 15;
-  started: boolean = false;
-  pickedAnswers: [number, string][] = [];
-  
-  toggle = [true, true, true, true, true];
-  prevToggleIndex: number = 0;
+	questionList: any = [];
+	questions: any = [];
+	count: number = 0;
+	progressPercentage: number = 15;
+	started: boolean = false;
+	pickedAnswers: [number, string][] = [];
 
-  constructor(
-  		private httpClient: HttpClient
-  ) { }
+	type : string = "";
+	
+	toggle = [true, true, true, true, true];
+	prevToggleIndex: number = 0;
 
-  ngOnInit(): void {
-  
-  	this.httpClient.get("assets/questions/quiz1.json").subscribe(data =>{
-      console.log(data);
-      this.questions = data;
-    });
+	constructor(
+			private httpClient: HttpClient,
+			private route: ActivatedRoute
+	) { }
 
-  
-  }
-  
-  nextQuestion() {
-  	if (this.count != 4) {
-  		this.count++;
-  	}
-  	this.progressPercentage = this.progressPercentage + 25;
-  	this.toggle = [true, true, true, true, true];
-  	
-  
-  }
-  
-  prevQuestion() {
-  	if ( this.count != 0) {
-  		this.count--;
-  	}
-  	this.progressPercentage = this.progressPercentage - 25;
-  	this.toggle = [true, true, true, true, true];
-  }
-  
-  startQuiz() {
-  	this.started = true;
-  }
-  
-  saveOption (value : string, id: number) {
-  	
-  	this.toggle[this.prevToggleIndex] = true;
-  	this.toggle[id-1] = !this.toggle[id-1];
-  	this.prevToggleIndex = id-1;
-  
-  	if (this.pickedAnswers[this.count] == undefined) {
-  		 this.pickedAnswers.push([this.count+1, value]);
-  	}
-  	else {
-  	
-  		this.pickedAnswers[this.count][1] = value;
-  	}
-   
-  	console.log(this.pickedAnswers);
-  }
+	ngOnInit(): void {
+	
+		this.httpClient.get("assets/quiz-data.json").subscribe(data =>{
+			this.questionList = data;
+
+			// get the type of quiz we are looking for
+			this.route.queryParams.subscribe(params => {
+				this.type = params["type"]
+			})
+			
+			for (let id in this.questionList){
+				if(this.questionList[id].type == this.type){
+					this.questions = this.questionList[id]
+				}
+			}
+		});
+
+		
+	}
+	
+	nextQuestion() {
+		if (this.count != 4) {
+			this.count++;
+		}
+		this.progressPercentage = this.progressPercentage + 25;
+		this.toggle = [true, true, true, true, true];
+		
+	
+	}
+	
+	prevQuestion() {
+		if ( this.count != 0) {
+			this.count--;
+		}
+		this.progressPercentage = this.progressPercentage - 25;
+		this.toggle = [true, true, true, true, true];
+	}
+	
+	startQuiz() {
+		this.started = true;
+	}
+	
+	saveOption (value : string, id: number) {
+		
+		this.toggle[this.prevToggleIndex] = true;
+		this.toggle[id-1] = !this.toggle[id-1];
+		this.prevToggleIndex = id-1;
+	
+		if (this.pickedAnswers[this.count] == undefined) {
+			this.pickedAnswers.push([this.count+1, value]);
+		}
+		else {
+		
+			this.pickedAnswers[this.count][1] = value;
+		}
+	
+		console.log(this.pickedAnswers);
+	}
 
 
 
