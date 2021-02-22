@@ -73,7 +73,7 @@ export class QuizComponent implements OnInit {
 
 			// get the type of quiz we are looking for
 			this.route.queryParams.subscribe(params => {
-				this.type = params["type"]
+				this.type = params["type"];
 			})
 			
 			for (let id in this.questionList){
