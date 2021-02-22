@@ -44,6 +44,11 @@ import { ActivatedRoute } from '@angular/router';
     	background-color: black;
     	opacity: 0.5;
 	}	
+	
+	.progbar {
+		margin-top: 5%;
+		margin-bottom: 2%;
+	}
   `
   ]
 })
