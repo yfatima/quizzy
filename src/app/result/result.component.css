@@ -1,0 +1,24 @@
+.result{
+    padding-top: 40px;
+    padding-bottom: 100px;
+    background-color: #2cd9d0;
+    color: white;
+}
+
+
+.quizzie-img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.btn{
+    background-color: #18cafe;
+    color: white;
+    padding: 15px 30px;
+}
+
+
+
+
+

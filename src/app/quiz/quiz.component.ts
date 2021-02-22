@@ -44,6 +44,11 @@ import { ActivatedRoute } from '@angular/router';
     	background-color: black;
     	opacity: 0.5;
 	}	
+	
+	.progbar {
+		margin-top: 5%;
+		margin-bottom: 2%;
+	}
   `
   ]
 })
@@ -73,7 +78,7 @@ export class QuizComponent implements OnInit {
 
 			// get the type of quiz we are looking for
 			this.route.queryParams.subscribe(params => {
-				this.type = params["type"]
+				this.type = params["type"];
 			})
 			
 			for (let id in this.questionList){

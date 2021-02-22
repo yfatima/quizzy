@@ -17,6 +17,12 @@
                 "option4": "Winter",
                 "op4url": "https://cdn.pixabay.com/photo/2021/01/09/17/22/forest-5903010_1280.jpg"
             }
+        ],
+        "result": [
+            {
+                "name": "Vanilla",
+                "result_image": ""
+            }
         ]
     },
     {
@@ -85,6 +91,12 @@
                 "option4": "Jal Tarang",
                 "op4url": "https://cdn.pixabay.com/photo/2019/12/01/22/21/sound-4666607_1280.jpg"
             }
+        ],
+        "result": [
+            {
+                "name": "Double Chocolate Chip Frappucino",
+                "result_image": "../../assets/Chocolate_Chip_Frap.jpeg"
+            }
         ]
     },
     {
@@ -94,6 +106,12 @@
         "question_prompt": "What is your recommended major?",
         "questions": [
             {}
+        ],
+        "result": [
+            {
+                "name": "Double Chocolate Chip Frappucino",
+                "result_image": ""
+            }
         ]
     }
 ]
