@@ -1,12 +1,20 @@
-<div class="container mt-5 list">
+<div class="container list">
     <div class="row justify-content-center">
         <div class="col-md-12 text-center list-header">
             <strong>Popular Quizzes</strong>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-md-4 text-center list-item" *ngFor="let data of quizData">
-           <a href='/quiz'>{{data.type}}</a>
+    <div class="row justify-content-center align-items-center list-section" *ngFor="let data of quizData">
+        <div class="col-sm-6 list-item">
+            <div class="item-header">{{data.type}}</div>
+            <div class="item-subheader">{{data.description}}</div>
+            <div class="">
+                <a href="/list" class="btn btn-lg" role="button" aria-pressesd="true">Take quiz</a>
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+            <img src="" class="img-fluid" alt="image of {{data.type}}">
         </div>
     <div>
 </div>
