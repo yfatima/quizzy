@@ -24,9 +24,13 @@
 
 <div class="container mt-5 list">
     <div class="row justify-content-center">
-         <div class="row mt-5 col-6">
-                    <a href="/home" class="btn btn-lg" role="button" aria-pressesd="true">EXIT</a>
-         </div>
+    	<ul>
+         <a href="/home" class="btn btn-lg" role="button" aria-pressesd="true">EXIT</a>
+    	 </ul>
+    	 <ul>
+    	 <a class="btn btn-lg" routerLink="/quiz" [queryParams]= "{ type: quizData[quizId].type  }" 
+    	 role="button" aria-pressesd="true">TAKE IT AGAIN</a>
+    	 </ul>
     </div>
 </div>
 

@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ResultComponent implements OnInit {
 
   quizData: any = [];
+  quizId: string = "";
   type: string = ""; 
   allResults: any = [];
   result: any = {};
@@ -26,6 +27,7 @@ export class ResultComponent implements OnInit {
       
         for (let id in this.quizData){
           if(this.quizData[id].type == this.type){
+          	this.quizId = id;
             this.allResults = this.quizData[id].result;
           }
         }

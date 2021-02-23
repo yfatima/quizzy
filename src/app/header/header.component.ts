@@ -41,7 +41,7 @@ export class HeaderComponent implements OnInit {
   	const dialogConfig = new MatDialogConfig();
   	dialogConfig.disableClose = true;
   	dialogConfig.autoFocus = true;
-  	dialogConfig.width = "40%";
+  	dialogConfig.width = "45%";
   	dialogConfig.height = "50%";
   	this.dialog.open(SignupComponent, dialogConfig);
   }

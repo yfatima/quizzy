@@ -7,12 +7,20 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './quiz.component.html',
   styles: [
   `
-  .btn-image {
-    width: 25rem; 
-    height: 15rem;
-    margin: 0.5rem;
-    background-repeat: no-repeat;
-    background-size: 100% 100% !important;
+  	.btn-image {
+    	width: 25rem; 
+   	 	height: 15rem;
+   		margin: 0.5rem;
+    	background-repeat: no-repeat;
+    	background-size: 100% 100% !important;
+	}
+	
+	.start-image {
+		max-width: 25rem; 
+    	max-height: 15rem;
+    	margin: 0.5rem;
+    	background-repeat: no-repeat;
+    	background-size: 100% 100% !important;
 	}
 	
 	.options {
