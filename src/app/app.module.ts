@@ -23,14 +23,14 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 
 const config = {
-  apiKey: "AIzaSyBhYP0CoN8ikIY1BTG8myLQZlN6xa-sm4g",
-  authDomain: "quizzy-3eb2f.firebaseapp.com",
-  databaseURL: "https://quizzy-3eb2f-default-rtdb.firebaseio.com",
-  projectId: "quizzy-3eb2f",
-  storageBucket: "quizzy-3eb2f.appspot.com",
-  messagingSenderId: "828953244611",
-  appId: "1:828953244611:web:b874cb3577602975808376",
-  measurementId: "G-SCZZXWSYYC"
+  apiKey: "AIzaSyBpOlQxHOQVJw7bqidKA5mJAFaJZpOYwfs",
+  authDomain: "quizzie-4c9e8.firebaseapp.com",
+  databaseUrl: "https://quizzie-4c9e8-default-rtdb.firebaseio.com",
+  projectId: "quizzie-4c9e8",
+  storageBucket: "quizzie-4c9e8.appspot.com",
+  messagingSenderId: "468120506353",
+  appId: "1:468120506353:web:549e035186ab0e05df3e50",
+  measurementId: "G-RPFFMSB4D7"
 };
 
 @NgModule({
