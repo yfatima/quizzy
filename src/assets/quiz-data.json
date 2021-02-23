@@ -1,6 +1,7 @@
 [
     {
         "type": "Ice cream",
+        "description": "Find the right ice cream flavor for you.",
         "name": "Ice Cream Flavor Quiz",
         "main_image": "https://cdn.pixabay.com/photo/2018/09/02/04/41/popsicle-3648146_960_720.png",
         "question_prompt": "What is your recommended ice cream?",
@@ -75,6 +76,7 @@
     },
     {
         "type": "Starbucks drink",
+        "description": "Are you a hot or warm drink person? Maybe find out what type of drink works for you!",
         "name": "Starbucks Drink Quiz",
         "main_image": "https://cdn.pixabay.com/photo/2019/10/01/09/31/coffee-4517706_1280.jpg",
         "question_prompt": "What is your recommended drink?",
@@ -149,6 +151,7 @@
     },
     {
         "type": "Major",
+        "description": "Confused what major to take? Lets find out.",
         "name": "Recommended Major Quiz",
         "main_image": "https://cdn.pixabay.com/photo/2016/03/26/13/12/pencils-1280558_960_720.jpg",
         "question_prompt": "What is your recommended major?",

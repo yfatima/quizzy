@@ -1,5 +1,6 @@
 .list{
     background-color: #eaf8f9;
+    margin-top: 100px;
     padding-top: 30px;
     padding-bottom: 80px;
     border-radius: 6px;
@@ -12,5 +13,23 @@
 }
 
 .list-item{
-    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.item-header{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.item-subheader{
+    font-size: 15px;
+}
+
+.btn{
+    margin-top: 40px;
+    background-color: #18fe8b;
+}
+
+.btn:hover{
+    background-color: #1cb367;
 }
