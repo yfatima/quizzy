@@ -11,6 +11,29 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBpOlQxHOQVJw7bqidKA5mJAFaJZpOYwfs",
+      authDomain: "quizzie-4c9e8.firebaseapp.com",
+      projectId: "quizzie-4c9e8",
+      storageBucket: "quizzie-4c9e8.appspot.com",
+      messagingSenderId: "468120506353",
+      appId: "1:468120506353:web:549e035186ab0e05df3e50",
+      measurementId: "G-RPFFMSB4D7"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
   <app-root></app-root>
 </body>
 </html>

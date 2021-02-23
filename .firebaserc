@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "quizzie-4c9e8": {
+      "hosting": {
+        "quizzy": [
+          "quizzie-4c9e8"
+        ]
+      }
+    }
+  }
+}

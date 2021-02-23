@@ -110,6 +110,10 @@
           "options": {
             "browserTarget": "quizzy:build"
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
