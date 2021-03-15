@@ -6,6 +6,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { LoginComponent } from './login/login.component';
 import { ResultComponent } from './result/result.component';
 import { SignupComponent } from './signup/signup.component';
+import { EmojiquizComponent } from './emojiquiz/emojiquiz.component';
 
 const routes: Routes = [
   { path:'', redirectTo: 'home', pathMatch: 'full' },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path:'quiz', component: QuizComponent},
   { path:'result', component: ResultComponent},
   { path:'login', component: LoginComponent},
-  { path:'signup', component: SignupComponent}
+  { path:'signup', component: SignupComponent},
+  { path:'emojiquiz', component: EmojiquizComponent}
 ];
 
 @NgModule({

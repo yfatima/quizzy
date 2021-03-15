@@ -20,6 +20,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { EmojiquizComponent } from './emojiquiz/emojiquiz.component';
 
 
 const config = {
@@ -43,7 +44,8 @@ const config = {
     QuizComponent,
     LoginComponent,
     ResultComponent,
-    SignupComponent
+    SignupComponent,
+    EmojiquizComponent
   ],
   imports: [
     BrowserModule,

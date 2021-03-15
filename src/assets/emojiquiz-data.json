@@ -1,0 +1,141 @@
+[
+    {
+        "type": "Guess Food By Emoji",
+        "description": "Can you guess the food by the emojis? Take the challenge!",
+        "name": "Food Emoji Quiz",
+        "main_image": "https://cdn.pixabay.com/photo/2015/12/09/17/11/vegetables-1085063_1280.jpg",
+        "questions": [
+            {
+                "question_prompt": "Guess The Food",
+                "picCount": 3,
+                "pic1": "pan",
+                "pic1url": "https://cdn.pixabay.com/photo/2016/04/01/12/21/cooking-1300675_1280.png",
+                "pic2": "cake",
+                "pic2url": "https://cdn.pixabay.com/photo/2012/04/16/12/37/cake-35805_1280.png",
+                "operatorpic": "plus",
+                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
+            	"correct_answer": "pancakes"
+            },
+             {
+                "question_prompt": "Guess The Food",
+                "picCount": 3,
+                "pic1": "pan",
+                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
+                "pic2": "cake",
+                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "operatorpic": "plus",
+                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
+            	"correct_answer": "pancakes"
+            },
+             {
+                "question_prompt": "Guess The Food",
+                "picCount": 3,
+                "pic1": "pan",
+                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
+                "pic2": "cake",
+                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "operatorpic": "plus",
+                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
+            	"correct_answer": "pancakes"
+            },
+            {
+                "question_prompt": "Guess The Food",
+                "picCount": 3,
+                "pic1": "pan",
+                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
+                "pic2": "cake",
+                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "operatorpic": "plus",
+                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
+            	"correct_answer": "pancakes"
+            },
+             {
+                "question_prompt": "Guess The Food",
+                "picCount": 3,
+                "pic1": "pan",
+                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
+                "pic2": "cake",
+                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "operatorpic": "plus",
+                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
+            	"correct_answer": "pancakes"
+            }
+               
+        ],
+        "result": [
+            {
+                "name": "How many did you figure out?",
+                "result_image": "https://cdn.pixabay.com/photo/2014/10/06/15/24/ice-cream-476361_960_720.jpg"
+            }
+        ]
+    },
+	{
+        "type": "Guess Vegetable By Emoji",
+        "description": "Can you guess the food by the emojis? Take the challenge!",
+        "name": "Food Emoji Quiz",
+        "main_image": "https://cdn.pixabay.com/photo/2015/12/09/17/11/vegetables-1085063_1280.jpg",
+        "questions": [
+            {
+                "question_prompt": "Guess The Food",
+                "picCount": 3,
+                "pic1": "pan",
+                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
+                "pic2": "cake",
+                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "operatorpic": "plus",
+                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
+            	"correct_answer": "pancakes"
+            },
+             {
+                "question_prompt": "Guess The Food",
+                "picCount": 3,
+                "pic1": "pan",
+                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
+                "pic2": "cake",
+                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "operatorpic": "plus",
+                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
+            	"correct_answer": "pancakes"
+            },
+             {
+                "picCount": 3,
+                "pic1": "pan",
+                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
+                "pic2": "cake",
+                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "operatorpic": "plus",
+                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
+            	"correct_answer": "pancakes"
+            },
+            {
+                "question_prompt": "Guess The Food",
+                "picCount": 3,
+                "pic1": "pan",
+                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
+                "pic2": "cake",
+                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "operatorpic": "plus",
+                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
+            	"correct_answer": "pancakes"
+            },
+             {
+                "question_prompt": "Guess The Food",
+                "picCount": 3,
+                "pic1": "pan",
+                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
+                "pic2": "cake",
+                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "operatorpic": "plus",
+                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
+            	"correct_answer": "pancakes"
+            }
+               
+        ],
+        "result": [
+            {
+                "name": "How many did you figure out?",
+                "result_image": "https://cdn.pixabay.com/photo/2014/10/06/15/24/ice-cream-476361_960_720.jpg"
+            }
+        ]
+    }
+]

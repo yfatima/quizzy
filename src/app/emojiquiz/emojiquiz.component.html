@@ -1,0 +1,66 @@
+<div  class="container-fluid"> 
+
+<div class="progress progbar">
+  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: {{progressPercentage}}%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+		<div *ngIf="started">
+		<ul>	
+		  <div *ngFor="let question of questions.questions; let i = index">
+		  <div *ngIf="i == count">
+			  <div class="container border rounded questionborder">
+				  <h2 class="text-center">{{question.question_prompt}}</h2>
+				  
+				  <div class="row justify-content-center">
+				    
+					<div class="card btn-image" style="background-image: url({{question.pic1url}}) !important;"></div>
+					<div class="card btn-image" style="background-image: url({{question.opurl}}) !important;"></div>
+					<div class="card btn-image" style="background-image: url({{question.pic2url}}) !important;"></div>
+				 </div>
+				 <br><br>
+				 <div class="row justify-content-center">
+				 	<input type="text" name="answer" size="30" placeholder="enter your guess">
+				 </div>
+			</div>
+		</div>
+		  </div>
+		  </ul>
+		  
+		  <div class="row justify-content-center">
+		  <div *ngIf="count != 0">
+		  <input class="btn btn-primary" type="button" value="Back" (click)="prevQuestion()">
+		  </div>
+		<div *ngIf="count != 4">
+			<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()">
+		</div>
+		<div *ngIf="count == 4">
+			<input class="btn btn-primary" type="submit" value="Done" routerLink="/result" [queryParams]= "{ type: this.type  }">
+		</div>
+		</div>
+		  </div>
+		  
+		  <div *ngIf="started == false">
+			  
+			  <div class="container border rounded quizborder">
+			  <ul>
+					  <h2 class="text-center">{{questions.name}}</h2>
+				<div class="row justify-content-center">
+					<ul>
+					<p>Can you guess the foods you eat through emojis? Take this food emoji quiz to find out!</p>
+					</ul>
+					<ul>
+					<div class="card start-image">
+						<img src="{{questions.main_image}}" alt="{{questions.type}}">
+						
+					</div>
+					</ul>
+				</div>
+			</ul><br><br>
+			<div class="row justify-content-center">
+				<input class="btn btn-primary" type="button" value="Start quiz" (click)="startQuiz()">
+				<input class="btn btn-primary" type="button" value="Go Back" routerLink="/list">
+			</div>
+			</div>
+			
+			  
+		  </div>
+	</div>
