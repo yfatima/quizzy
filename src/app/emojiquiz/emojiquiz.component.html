@@ -18,7 +18,14 @@
 				 </div>
 				 <br><br>
 				 <div class="row justify-content-center">
-				 	<input type="text" name="answer" size="30" placeholder="enter your guess">
+				 	<input #input type="text" class="form-control userinput" 
+				 	placeholder="Enter Your Guess" (keyup.enter)="checkAnswer(input.value)">
+				 </div>
+				 <div *ngIf="correctAnswer === 'correct' " class="row justify-content-center text-success">
+				 	Correct!
+				 </div>
+				 <div *ngIf="correctAnswer === 'wrong' " class="row justify-content-center text-danger">
+				 	Try Again!
 				 </div>
 			</div>
 		</div>
