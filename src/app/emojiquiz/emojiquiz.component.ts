@@ -62,6 +62,7 @@ import { ActivatedRoute } from '@angular/router';
 		width: 30% !important;
 		margin: 1rem !important;
 	}
+	
 	`
   ]
 })
@@ -91,7 +92,10 @@ export class EmojiquizComponent implements OnInit {
 // 				this.type = params["type"];
 // 			})
 // 			
-			this.type = "Guess Food By Emoji";
+			//this.type = "Guess Food By Emoji";
+			this.route.queryParams.subscribe(params => {
+				this.type = params["type2"];
+			})
 			
 			for (let id in this.questionList){
 				if(this.questionList[id].type == this.type){

@@ -1,9 +1,9 @@
 [
     {
-        "type": "Guess Food By Emoji",
-        "description": "Can you guess the food by the emojis? Take the challenge!",
+        "type": "Guess The Food from Emojis",
+        "description": "Take the challenge!",
         "name": "Food Emoji Quiz",
-        "main_image": "https://cdn.pixabay.com/photo/2015/12/09/17/11/vegetables-1085063_1280.jpg",
+        "main_image": "https://www.diabetes.co.uk/wp-content/uploads/2019/01/iStock-10131071761-1.jpg",
         "questions": [
             {
                 "question_prompt": "Guess The Food",
@@ -13,65 +13,65 @@
                 "pic2": "cake",
                 "pic2url": "https://cdn.pixabay.com/photo/2012/04/16/12/37/cake-35805_1280.png",
                 "operatorpic": "plus",
-                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
+                "opurl": "https://hotemoji.com/images/dl/d/heavy-plus-sign-emoji-by-twitter.png",
             	"correct_answer": "pancake"
             },
              {
                 "question_prompt": "Guess The Food",
                 "picCount": 3,
-                "pic1": "pan",
-                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
-                "pic2": "cake",
-                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "pic1": "fortune globe",
+                "pic1url": "https://cdn-0.emojis.wiki/emoji-pics/microsoft/crystal-ball-microsoft.png",
+                "pic2": "cookie",
+                "pic2url": "https://wprock.fr/wp-content/themes/wprock-theme/img/emoji/joypixels/512/1f36a.png",
                 "operatorpic": "plus",
-                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
-            	"correct_answer": "pancakes"
+                "opurl": "https://hotemoji.com/images/dl/d/heavy-plus-sign-emoji-by-twitter.png",
+            	"correct_answer": "fortune cookie"
             },
              {
                 "question_prompt": "Guess The Food",
                 "picCount": 3,
-                "pic1": "pan",
-                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
-                "pic2": "cake",
-                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "pic1": "hot",
+                "pic1url": "https://images.emojiterra.com/google/android-11/512px/1f525.png",
+                "pic2": "dog",
+                "pic2url": "https://i.pinimg.com/originals/9f/8a/16/9f8a16e38df86be51951fa374fb9b351.png",
                 "operatorpic": "plus",
-                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
-            	"correct_answer": "pancakes"
+                "opurl": "https://hotemoji.com/images/dl/d/heavy-plus-sign-emoji-by-twitter.png",
+            	"correct_answer": "hotdog"
             },
             {
                 "question_prompt": "Guess The Food",
                 "picCount": 3,
-                "pic1": "pan",
-                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
-                "pic2": "cake",
-                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "pic1": "pine",
+                "pic1url": "https://images.emojiterra.com/twitter/512px/1f332.png",
+                "pic2": "apple",
+                "pic2url": "https://creazilla-store.fra1.digitaloceanspaces.com/emojis/44744/red-apple-emoji-clipart-md.png",
                 "operatorpic": "plus",
-                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
-            	"correct_answer": "pancakes"
+                "opurl": "https://hotemoji.com/images/dl/d/heavy-plus-sign-emoji-by-twitter.png",
+            	"correct_answer": "pineapple"
             },
              {
                 "question_prompt": "Guess The Food",
                 "picCount": 3,
-                "pic1": "pan",
-                "pic1url": "https://www.pngfind.com/pngs/m/282-2828239_animation-frying-pan-cookware-and-bakeware-.png",
-                "pic2": "cake",
-                "pic2url": "https://www.pngfind.com/pngs/m/450-4502099_birthday-cake-with-candle-emoji-icon-emoji-kue.png",
+                "pic1": "milk",
+                "pic1url": "https://img.icons8.com/emoji/452/glass-of-milk.png",
+                "pic2": "shake",
+                "pic2url": "http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/handshake.png",
                 "operatorpic": "plus",
-                "opurl": "https://cdn.pixabay.com/photo/2012/04/02/16/07/plus-24844_1280.png",
-            	"correct_answer": "pancakes"
+                "opurl": "https://hotemoji.com/images/dl/d/heavy-plus-sign-emoji-by-twitter.png",
+            	"correct_answer": "milkshake"
             }
                
         ],
         "result": [
             {
                 "name": "How many did you figure out?",
-                "result_image": "https://cdn.pixabay.com/photo/2014/10/06/15/24/ice-cream-476361_960_720.jpg"
+                "result_image": "https://cdn.pixabay.com/photo/2015/12/09/17/11/vegetables-1085063_1280.jpg"
             }
         ]
     },
 	{
-        "type": "Guess Vegetable By Emoji",
-        "description": "Can you guess the food by the emojis? Take the challenge!",
+        "type": "Guess The Vegetable from Emojis",
+        "description": "Take the challenge!",
         "name": "Food Emoji Quiz",
         "main_image": "https://cdn.pixabay.com/photo/2015/12/09/17/11/vegetables-1085063_1280.jpg",
         "questions": [

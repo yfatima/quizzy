@@ -18,11 +18,11 @@
         <ul class="navbar-nav ml-auto">
         
         		<!-- template will replace this div -->
-        		<li class="nav-item active" *ngIf="!auth.getStatus()">
-                	<a class="nav-link" (click)="auth.googleSignin()">Log In</a>
+        		<li class="nav-item" *ngIf="!auth.getStatus()">
+                	<button class="btn btn-primary" (click)="auth.googleSignin()">Log In</button>
             	</li>
-            	<li class="nav-item active" *ngIf="auth.getStatus()">
-                	<a class="nav-link" (click)="auth.signOut()">Log out</a>
+            	<li class="nav-item" *ngIf="auth.getStatus()">
+                	<button class="btn btn-primary" (click)="auth.signOut()">Log out</button>
             	</li>
            
             <!--<li>

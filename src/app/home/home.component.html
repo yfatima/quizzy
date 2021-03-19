@@ -35,6 +35,9 @@
         <div class="col-md-4 text-center list-item" *ngFor="let data of quizData">
             <a routerLink="/quiz" [queryParams]= "{ type: data.type  }">{{data.type}}</a>
         </div>
+        <div class="col-md-4 text-center list-item" *ngFor="let d of emojiQuizData">
+            <a routerLink="/emojiquiz" [queryParams]= "{ type2: d.type  }">{{d.type}}</a>
+        </div>
     <div>
 </div>
 
