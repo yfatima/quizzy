@@ -52,8 +52,8 @@
 		  <input class="btn btn-primary" type="button" value="Back" (click)="prevQuestion()">
 		  </div>
 		<div *ngIf="count != 4">
-			<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()">
 			<input class="btn btn-primary" type="reset" value="Save" routerLink="/list">
+			<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()">
 		</div>
 		<div *ngIf="count == 4">
 			<input class="btn btn-primary" type="submit" value="Done" routerLink="/result" [queryParams]= "{ type: this.type  }">
@@ -79,8 +79,8 @@
 				</div>
 			</ul><br><br>
 			<div class="row justify-content-center">
-				<input class="btn btn-primary" type="button" value="Start quiz" (click)="startQuiz()">
-				<input class="btn btn-primary" type="button" value="Go Back" routerLink="/list">
+				<input class="col-md-3 btn btn-primary" type="button" value="Go Back" routerLink="/list">
+				<input class="col-md-3 btn btn-primary" type="button" value="Start quiz" (click)="startQuiz()">
 			</div>
 			</div>
 			
