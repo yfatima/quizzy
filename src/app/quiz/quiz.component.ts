@@ -65,7 +65,7 @@ export class QuizComponent implements OnInit {
 	questionList: any = [];
 	questions: any = [];
 	count: number = 0;
-	progressPercentage: number = 15;
+	progressPercentage: number = 0;
 	started: boolean = false;
 	pickedAnswers: [number, string, number][] = [];
 
@@ -103,7 +103,7 @@ export class QuizComponent implements OnInit {
 		if (this.count != 4) {
 			this.count++;
 		}
-		this.progressPercentage = this.progressPercentage + 25;
+		this.progressPercentage = this.progressPercentage + 20;
 		this.toggle = [true, true, true, true, true];
 		
 		if (this.pickedAnswers.length >= this.count){
