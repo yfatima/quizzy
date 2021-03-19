@@ -67,7 +67,7 @@ export class QuizComponent implements OnInit {
 	count: number = 0;
 	progressPercentage: number = 15;
 	started: boolean = false;
-	pickedAnswers: [number, string][] = [];
+	pickedAnswers: [number, string, number][] = [];
 
 	type : string = "";
 	
@@ -106,6 +106,10 @@ export class QuizComponent implements OnInit {
 		this.progressPercentage = this.progressPercentage + 25;
 		this.toggle = [true, true, true, true, true];
 		
+		if (this.pickedAnswers.length >= this.count){
+			this.toggle[this.pickedAnswers[this.count][2]-1] = false;
+		}
+		
 	
 	}
 	
@@ -114,7 +118,10 @@ export class QuizComponent implements OnInit {
 			this.count--;
 		}
 		this.progressPercentage = this.progressPercentage - 25;
+		
+		console.log(this.pickedAnswers)
 		this.toggle = [true, true, true, true, true];
+		this.toggle[this.pickedAnswers[this.count][2] - 1] = false;
 	}
 	
 	startQuiz() {
@@ -128,11 +135,12 @@ export class QuizComponent implements OnInit {
 		this.prevToggleIndex = id-1;
 	
 		if (this.pickedAnswers[this.count] == undefined) {
-			this.pickedAnswers.push([this.count+1, value]);
+			this.pickedAnswers.push([this.count+1, value, id]);
 		}
 		else {
 		
 			this.pickedAnswers[this.count][1] = value;
+			this.pickedAnswers[this.count][2] = id;
 		}
 	
 		console.log(this.pickedAnswers);

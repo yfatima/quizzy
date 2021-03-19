@@ -1,79 +1,73 @@
 <div  class="container-fluid"> 
+	<div class="progress progbar">
+		<div class="progress-bar progress-bar-striped" role="progressbar" style="width: {{progressPercentage}}%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+	</div>
 
-<div class="progress progbar">
-  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: {{progressPercentage}}%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-		<div *ngIf="started">
+	<div *ngIf="started">
 		<ul>	
-		  <div *ngFor="let question of questions.questions; let i = index">
-		  <div *ngIf="i == count">
-			  <div class="container border rounded questionborder">
-				  <h2 class="text-center">{{question.prompt}}</h2>
-				  
-				  <div class="row justify-content-center">
-					<div class="card btn-image" style="background-image: url({{question.op1url}}) !important;">
-					<button 
-					type="button" class="btn options" 
-					(click)="saveOption(question.option1, 1)"
-					[ngClass]="{'picked': !toggle[0]}">
-						{{question.option1}}
-					</button>
+			<div *ngFor="let question of questions.questions; let i = index">
+				<div *ngIf="i == count">
+					<div class="container border rounded questionborder">
+						<h2 class="text-center">{{question.prompt}}</h2>
+
+						<div class="row justify-content-center">
+							<div class="card btn-image" style="background-image: url({{question.op1url}}) !important;">
+								<button 
+								type="button" class="btn options" 
+								(click)="saveOption(question.option1, 1)"
+								[ngClass]="{'picked': !toggle[0]}">
+								</button>
+							</div>
+							<div class="card btn-image" style="background-image: url({{question.op2url}}) !important;">
+								<button type="button" class="btn options" 
+								(click)="saveOption(question.option2, 2)"
+								[ngClass]="{'picked': !toggle[1]}">
+								</button>
+							</div>
+							<div class="w-100"></div>
+								<div class="card btn-image" style="background-image: url({{question.op3url}}) !important;">
+									<button type="button" class="btn options" 
+									(click)="saveOption(question.option3, 3)"
+									[ngClass]="{'picked': !toggle[2]}">
+									</button>
+								</div>
+							<div class="card btn-image" style="background-image: url({{question.op4url}}) !important;">
+								<button type="button" class="btn options" 
+								(click)="saveOption(question.option4, 4)"
+								[ngClass]="{'picked': !toggle[3]}">
+								</button>
+							</div>
+						</div>
 					</div>
-					<div class="card btn-image" style="background-image: url({{question.op2url}}) !important;">
-					<button type="button" class="btn options" 
-					(click)="saveOption(question.option2, 2)"
-					[ngClass]="{'picked': !toggle[1]}">
-						{{question.option2}}
-					</button>
-					</div>
-					<div class="w-100"></div>
-					   <div class="card btn-image" style="background-image: url({{question.op3url}}) !important;">
-					   <button type="button" class="btn options" 
-					   (click)="saveOption(question.option3, 3)"
-					   [ngClass]="{'picked': !toggle[2]}">
-						   {{question.option3}}
-					   </button>
-					   </div>
-					<div class="card btn-image" style="background-image: url({{question.op4url}}) !important;">
-					<button type="button" class="btn options" 
-					(click)="saveOption(question.option4, 4)"
-					[ngClass]="{'picked': !toggle[3]}">
-						{{question.option4}}
-					</button>
-					</div>
-				  </div>
+				</div>
+			</div>
+		</ul>
+		  
+		<div class="row justify-content-center">
+			<div *ngIf="count != 0">
+		  		<input class="btn btn-primary" type="button" value="Back" (click)="prevQuestion()">
+		  	</div>
+			<div *ngIf="count != 4">
+				<input class="btn btn-primary" type="reset" value="Save" routerLink="/list">
+				<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()">
+			</div>
+			<div *ngIf="count == 4">
+				<input class="btn btn-primary" type="submit" value="Done" routerLink="/result" [queryParams]= "{ type: this.type  }">
 			</div>
 		</div>
-		  </div>
-		  </ul>
+	</div>
 		  
-		  <div class="row justify-content-center">
-		  <div *ngIf="count != 0">
-		  <input class="btn btn-primary" type="button" value="Back" (click)="prevQuestion()">
-		  </div>
-		<div *ngIf="count != 4">
-			<input class="btn btn-primary" type="reset" value="Save" routerLink="/list">
-			<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()">
-		</div>
-		<div *ngIf="count == 4">
-			<input class="btn btn-primary" type="submit" value="Done" routerLink="/result" [queryParams]= "{ type: this.type  }">
-		</div>
-		</div>
-		  </div>
-		  
-		  <div *ngIf="started == false">
-			  
-			  <div class="container border rounded quizborder">
-			  <ul>
-					  <h2 class="text-center">{{questions.question_prompt}}</h2>
+	<div *ngIf="started == false">
+		<div class="container border rounded quizborder">
+			<ul>
+				<h2 class="text-center">{{questions.question_prompt}}</h2>
 				<div class="row justify-content-center">
 					<ul>
 					<p>Would know the PERFECT {{questions.type}} just for YOU! Then this QUIZ and you will KNOW!</p>
 					</ul>
 					<ul>
 					<div class="card start-image">
-						<img src="{{questions.main_image}}" alt="{{questions.type}}">
-						
+						<img src="{{questions.main_image}}" alt="{{questions.type}}">	
 					</div>
 					</ul>
 				</div>
@@ -82,8 +76,8 @@
 				<input class="col-md-3 btn btn-primary" type="button" value="Go Back" routerLink="/list">
 				<input class="col-md-3 btn btn-primary" type="button" value="Start quiz" (click)="startQuiz()">
 			</div>
-			</div>
+		</div>
 			
 			  
-		  </div>
 	</div>
+</div>
