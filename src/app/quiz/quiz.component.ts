@@ -117,7 +117,7 @@ export class QuizComponent implements OnInit {
 		if ( this.count != 0) {
 			this.count--;
 		}
-		this.progressPercentage = this.progressPercentage - 25;
+		this.progressPercentage = this.progressPercentage - 20;
 		
 		console.log(this.pickedAnswers)
 		this.toggle = [true, true, true, true, true];
