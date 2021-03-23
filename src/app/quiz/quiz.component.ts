@@ -100,11 +100,13 @@ export class QuizComponent implements OnInit {
 	}
 	
 	nextQuestion() {
-		if (this.count != 4) {
+		if (this.count + 1 == this.pickedAnswers.length) {
 			this.count++;
+			this.progressPercentage = this.progressPercentage + 20;
+			this.toggle = [true, true, true, true, true];
+		} else{
+			alert("Please select an answer before moving onto the next question")
 		}
-		this.progressPercentage = this.progressPercentage + 20;
-		this.toggle = [true, true, true, true, true];
 		
 		if (this.pickedAnswers.length >= this.count){
 			this.toggle[this.pickedAnswers[this.count][2]-1] = false;
@@ -116,6 +118,7 @@ export class QuizComponent implements OnInit {
 	prevQuestion() {
 		if ( this.count != 0) {
 			this.count--;
+			this.pickedAnswers.pop();
 		}
 		this.progressPercentage = this.progressPercentage - 20;
 		
@@ -126,6 +129,13 @@ export class QuizComponent implements OnInit {
 	
 	startQuiz() {
 		this.started = true;
+	}
+
+	doneFunction() {
+		if(this.pickedAnswers.length < 5){
+			alert("Must pick an answer before you finish the quiz")
+		}
+
 	}
 	
 	saveOption (value : string, id: number) {
@@ -144,6 +154,7 @@ export class QuizComponent implements OnInit {
 		}
 	
 		console.log(this.pickedAnswers);
+		console.log(this.count);
 	}
 
 

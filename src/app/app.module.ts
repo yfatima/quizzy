@@ -21,6 +21,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { EmojiquizComponent } from './emojiquiz/emojiquiz.component';
+import { HelpComponent } from './help/help.component';
 
 
 const config = {
@@ -45,7 +46,8 @@ const config = {
     LoginComponent,
     ResultComponent,
     SignupComponent,
-    EmojiquizComponent
+    EmojiquizComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,
