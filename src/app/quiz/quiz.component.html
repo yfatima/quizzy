@@ -51,8 +51,8 @@
 				<input class="btn btn-primary" type="reset" value="Save" routerLink="/list">
 				<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()">
 			</div>
-			<div *ngIf="count == 4">
-				<input class="btn btn-primary" type="submit" value="Done" routerLink="/result" [queryParams]= "{ type: this.type  }">
+			<div *ngIf="pickedAnswers.length == 5 && count == 4">
+				<input class="btn btn-primary" type="submit" value="Done" routerLink="{{doneFunction()}}" [queryParams]= "{ type: this.type  }">
 			</div>
 		</div>
 	</div>
