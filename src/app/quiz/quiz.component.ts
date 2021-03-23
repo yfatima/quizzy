@@ -100,6 +100,8 @@ export class QuizComponent implements OnInit {
 	}
 	
 	nextQuestion() {
+		console.log("Length: " + this.pickedAnswers.length);
+		console.log("Count: " + this.count);
 		if (this.count + 1 == this.pickedAnswers.length) {
 			this.count++;
 			this.progressPercentage = this.progressPercentage + 20;
@@ -118,7 +120,7 @@ export class QuizComponent implements OnInit {
 	prevQuestion() {
 		if ( this.count != 0) {
 			this.count--;
-			this.pickedAnswers.pop();
+			//this.pickedAnswers.pop();
 		}
 		this.progressPercentage = this.progressPercentage - 20;
 		
