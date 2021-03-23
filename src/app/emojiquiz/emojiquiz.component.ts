@@ -75,7 +75,7 @@ export class EmojiquizComponent implements OnInit {
   type : string = "";
   count: number = 0;
   userinput: string = "";
-  correctAnswer: string;
+  correctAnswer: string = "";
   	
   constructor(
   			private httpClient: HttpClient,
@@ -107,7 +107,7 @@ export class EmojiquizComponent implements OnInit {
   }
   
   startQuiz() {
-  	this.progressPercentage = 15;
+  	this.progressPercentage = 20;
   	this.started = true;
   }
   
@@ -115,7 +115,7 @@ export class EmojiquizComponent implements OnInit {
 	if (this.count != 4) {
 		this.count++;
 	}
-	this.progressPercentage = this.progressPercentage + 25;
+	this.progressPercentage = this.progressPercentage + 20;
 	this.correctAnswer = "";
    }
    
@@ -123,7 +123,7 @@ export class EmojiquizComponent implements OnInit {
 		if ( this.count != 0) {
 			this.count--;
 		}
-		this.progressPercentage = this.progressPercentage - 25;
+		this.progressPercentage = this.progressPercentage - 20;
 		this.correctAnswer = "";
 	}
 	
