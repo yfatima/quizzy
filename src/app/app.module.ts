@@ -24,15 +24,16 @@ import { EmojiquizComponent } from './emojiquiz/emojiquiz.component';
 import { HelpComponent } from './help/help.component';
 
 
-const config = {
-  apiKey: "AIzaSyBpOlQxHOQVJw7bqidKA5mJAFaJZpOYwfs",
-  authDomain: "quizzie-4c9e8.firebaseapp.com",
-  databaseUrl: "https://quizzie-4c9e8-default-rtdb.firebaseio.com",
-  projectId: "quizzie-4c9e8",
-  storageBucket: "quizzie-4c9e8.appspot.com",
-  messagingSenderId: "468120506353",
-  appId: "1:468120506353:web:549e035186ab0e05df3e50",
-  measurementId: "G-RPFFMSB4D7"
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC-J8-o3SHMvPDEsNtwtVVk8-Vd85kmGcE",
+  authDomain: "quizzie-v2.firebaseapp.com",
+  databaseURL: "https://quizzie-v2-default-rtdb.firebaseio.com",
+  projectId: "quizzie-v2",
+  storageBucket: "quizzie-v2.appspot.com",
+  messagingSenderId: "34102678861",
+  appId: "1:34102678861:web:59656d986fd25928835304",
+  measurementId: "G-315SR5WZ7Q"
 };
 
 @NgModule({
