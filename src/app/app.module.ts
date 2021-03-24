@@ -25,7 +25,7 @@ import { HelpComponent } from './help/help.component';
 
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+const config = {
   apiKey: "AIzaSyC-J8-o3SHMvPDEsNtwtVVk8-Vd85kmGcE",
   authDomain: "quizzie-v2.firebaseapp.com",
   databaseURL: "https://quizzie-v2-default-rtdb.firebaseio.com",
