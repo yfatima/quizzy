@@ -50,7 +50,7 @@
                 "option2": "Theme Park",
                 "op2url": "https://cdn.pixabay.com/photo/2017/02/09/10/08/roller-coaster-2051560_960_720.jpg",
                 "option3": "Beach",
-                "op3url": "https://cdn.pixabay.com/photo/2016/09/07/11/37/tropical-1651426_960_720.jpg",
+                "op3url": "https://cdn.pixabay.com/photo/2016/11/23/13/48/beach-1852945_1280.jpg",
                 "option4": "Exploring Europe",
                 "op4url": "https://cdn.pixabay.com/photo/2017/12/10/17/40/prague-3010407_960_720.jpg"
             },
@@ -70,7 +70,10 @@
         "result": [
             {
                 "name": "Vanilla ice cream flavor",
-                "result_image": "https://cdn.pixabay.com/photo/2014/10/06/15/24/ice-cream-476361_960_720.jpg"
+                "result_image": "https://cdn.pixabay.com/photo/2014/10/06/15/24/ice-cream-476361_960_720.jpg",
+                "order_link": "https://www.target.com/p/haagen-dazs-vanilla-ice-cream-28oz/-/A-31173176#lnk=sametab",
+                "action": "ORDER",
+                "store_name": "Target"
             }
         ]
     },
@@ -144,8 +147,11 @@
         ],
         "result": [
             {
-                "name": "Double Chocolate Chip Frappucino",
-                "result_image": "../../assets/Chocolate_Chip_Frap.jpeg"
+                "name": "Java Chip Frappucino",
+                "result_image": "../../assets/javachip.webp",
+                "order_link": "https://www.starbucks.com/menu/product/425/iced?parent=%2Fdrinks%2Ffrappuccino-blended-beverages%2Fcoffee-frappuccino",
+                "action": "ORDER",
+                "store_name": "Starbucks"
             }
         ]
     },
@@ -219,8 +225,11 @@
         ],
         "result": [
             {
-                "name": "Science Major!",
-                "result_image": "https://cdn.pixabay.com/photo/2010/12/05/space-shuttle-992_960_720.jpg"
+                "name": "Physics Major!",
+                "result_image": "https://cdn.pixabay.com/photo/2010/12/05/space-shuttle-992_960_720.jpg",
+                "order_link": "https://catalog.gmu.edu/colleges-schools/science/physics-astronomy/physics-bs/#admissionspoliciestext",
+                "action": "APPLY",
+                "store_name": "George Mason University"
             }
         ]
     }
