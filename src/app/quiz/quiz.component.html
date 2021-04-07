@@ -17,12 +17,14 @@
 								(click)="saveOption(question.option1, 1)"
 								[ngClass]="{'picked': !toggle[0]}">
 								</button>
+								<div>{{question.option1}}</div> 
 							</div>
 							<div class="card btn-image" style="background-image: url({{question.op2url}}) !important;">
 								<button type="button" class="btn options" 
 								(click)="saveOption(question.option2, 2)"
 								[ngClass]="{'picked': !toggle[1]}">
 								</button>
+								<div>{{question.option2}}</div> 
 							</div>
 							<div class="w-100"></div>
 								<div class="card btn-image" style="background-image: url({{question.op3url}}) !important;">
@@ -30,12 +32,14 @@
 									(click)="saveOption(question.option3, 3)"
 									[ngClass]="{'picked': !toggle[2]}">
 									</button>
+									<div>{{question.option3}}</div> 
 								</div>
 							<div class="card btn-image" style="background-image: url({{question.op4url}}) !important;">
 								<button type="button" class="btn options" 
 								(click)="saveOption(question.option4, 4)"
 								[ngClass]="{'picked': !toggle[3]}">
 								</button>
+								<div>{{question.option4}}</div> 
 							</div>
 						</div>
 					</div>

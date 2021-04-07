@@ -59,7 +59,7 @@ import { ActivatedRoute } from '@angular/router';
 	}
 	
 	.userinput {
-		width: 30% !important;
+		width: 20% !important;
 		margin: 1rem !important;
 	}
 	
@@ -76,6 +76,7 @@ export class EmojiquizComponent implements OnInit {
   count: number = 0;
   userinput: string = "";
   correctAnswer: string = "";
+  showCheckAnswerText: boolean = false;
   	
   constructor(
   			private httpClient: HttpClient,
@@ -117,6 +118,7 @@ export class EmojiquizComponent implements OnInit {
 	}
 	this.progressPercentage = this.progressPercentage + 20;
 	this.correctAnswer = "";
+	this.showCheckAnswerText = false;
    }
    
    	prevQuestion() {
@@ -125,6 +127,7 @@ export class EmojiquizComponent implements OnInit {
 		}
 		this.progressPercentage = this.progressPercentage - 20;
 		this.correctAnswer = "";
+		this.showCheckAnswerText = false;
 	}
 	
 	checkAnswer(value: string) {
@@ -136,7 +139,12 @@ export class EmojiquizComponent implements OnInit {
 			this.userinput = "error";
 			this.correctAnswer = "wrong";
 		}
+		this.showCheckAnswerText = false;
 		
+	}
+	
+	checkText() {
+		this.showCheckAnswerText = true;
 	}
 
 }

@@ -18,8 +18,11 @@
 				 <br><br>
 				 <div class="row justify-content-center">
 				 	<input #input type="text" class="form-control userinput" 
-				 	placeholder="Enter Your Guess" (keyup.enter)="checkAnswer(input.value)">
+				 	placeholder="Type Your Guess" (keyup.enter)="checkAnswer(input.value)" (keydown)="checkText()">	
 				 </div>
+				  <p *ngIf="showCheckAnswerText" class="row justify-content-center text-primary">
+				 	Enter to check your answer.
+				 	</p>
 				 <div *ngIf="correctAnswer === 'correct' " class="row justify-content-center text-success">
 				 	Correct!
 				 </div>
@@ -41,7 +44,7 @@
 		</div>
 		<div *ngIf="count == 4">
 			<input class="btn btn-primary" type="submit" value="Done" routerLink="/home" 
-			[queryParams]= "{ type: this.type  }" [disabled]="correctAnswer === ''">
+			 [queryParams]= "{ type: this.type  }" [disabled]="correctAnswer === ''">
 		</div>
 		</div>
 		  </div>

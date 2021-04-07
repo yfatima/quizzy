@@ -57,6 +57,31 @@ import { ActivatedRoute } from '@angular/router';
 		margin-top: 5%;
 		margin-bottom: 2%;
 	}
+	
+	.btn-image:hover{
+ 		cursor: pointer;
+	}
+
+	.btn-image:hover div{
+ 		width: 150px;
+ 		padding: 8px 15px;
+ 		visibility: visible;
+ 		opacity: 0.7; 
+	}
+	.btn-image div{
+ 		position: absolute;
+ 		bottom: 0;
+ 		right: 0;
+ 		background: black;
+ 		color: white;
+ 		margin-bottom: 5px;
+ 		font-family: sans-serif;
+ 		opacity: 0;
+ 		visibility: hidden;
+ 		-webkit-transition: visibility 0s, opacity 0.5s linear; 
+ 		transition: visibility 0s, opacity 0.5s linear;
+	}
+	
   `
   ]
 })
