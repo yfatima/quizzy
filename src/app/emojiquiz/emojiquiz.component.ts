@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { ActivatedRoute } from '@angular/router';
+import { Subscription, interval } from 'rxjs';
 
 @Component({
   selector: 'app-emojiquiz',
@@ -63,10 +64,31 @@ import { ActivatedRoute } from '@angular/router';
 		margin: 1rem !important;
 	}
 	
+	.timer {
+    	text-align: center;
+    	font-family: Arial, sans-serif;
+    	font-size: 1.4em;
+    	letter-spacing: -1px;
+  	}
+  	.timer span {
+    	font-size: 2em;
+    	margin: 0 3px 0 15px;
+  	}
+  	
+  	.btn-circle.btn-xl {
+            width: 50px;
+            height: 50px;
+            padding: 7px 10px;
+            border-radius: 25px;
+            font-size: 10px;
+            text-align: center;
+            float: right;
+        }
+	
 	`
   ]
 })
-export class EmojiquizComponent implements OnInit {
+export class EmojiquizComponent implements OnInit, OnDestroy {
 
   progressPercentage: number = 0;
   started: boolean = false;
@@ -76,7 +98,22 @@ export class EmojiquizComponent implements OnInit {
   count: number = 0;
   userinput: string = "";
   correctAnswer: string = "";
-  showCheckAnswerText: boolean = false;
+  
+	private subscription: Subscription;
+  
+	public dateNow = new Date();
+    public dDay = new Date();
+    milliSecondsInASecond = 1000;
+    hoursInADay = 24;
+    minutesInAnHour = 60;
+    SecondsInAMinute  = 60;
+
+    public timeDifference;
+    public secondsToDday = 11;
+    timerOff: boolean = true;
+    size: any = 0.3;
+    color: string = "black";
+
   	
   constructor(
   			private httpClient: HttpClient,
@@ -108,8 +145,23 @@ export class EmojiquizComponent implements OnInit {
   }
   
   startQuiz() {
+  
+  	this.subscription = interval(1000)
+    .subscribe(x => { 
+           		if (this.secondsToDday == 1) {
+           			this.size = 1;
+           			this.color = "red";
+           		}
+           		if (this.timerOff){
+           			this.getTimeDifference();
+           		}
+           		
+    }); 
+   
+
   	this.progressPercentage = 20;
   	this.started = true;
+  	this.dDay.setSeconds(this.dDay.getSeconds() + 62); 
   }
   
   nextQuestion() {
@@ -118,7 +170,8 @@ export class EmojiquizComponent implements OnInit {
 	}
 	this.progressPercentage = this.progressPercentage + 20;
 	this.correctAnswer = "";
-	this.showCheckAnswerText = false;
+	this.secondsToDday = 11;
+	this.timerOff = true;
    }
    
    	prevQuestion() {
@@ -127,24 +180,39 @@ export class EmojiquizComponent implements OnInit {
 		}
 		this.progressPercentage = this.progressPercentage - 20;
 		this.correctAnswer = "";
-		this.showCheckAnswerText = false;
+		this.secondsToDday = 11;
+		this.timerOff = true;
 	}
 	
 	checkAnswer(value: string) {
-		if (value === this.questions.questions[this.count].correct_answer) {
-			this.userinput = value;
+		this.userinput = value;	
+	}
+	
+	check() {
+		if (this.userinput === this.questions.questions[this.count].correct_answer) {
 			this.correctAnswer = "correct";
 		}
 		else {
 			this.userinput = "error";
 			this.correctAnswer = "wrong";
 		}
-		this.showCheckAnswerText = false;
-		
 	}
 	
-	checkText() {
-		this.showCheckAnswerText = true;
-	}
+	private getTimeDifference () {
+		this.secondsToDday = this.secondsToDday - 1;
+		console.log(this.secondsToDday);
+		if (this.secondsToDday == 0) {
+			this.timerOff = false;
+		}
+		console.log(this.timerOff);
+
+		
+        //this.timeDifference = this.dDay.getTime() - new  Date().getTime();
+        //this.allocateTimeUnits(this.timeDifference);
+    }
+
+	ngOnDestroy() {
+     this.subscription.unsubscribe();
+    }
 
 }

@@ -7,22 +7,22 @@
 		  <div *ngFor="let question of questions.questions; let i = index">
 		  <div *ngIf="i == count">
 			  <div class="container border rounded questionborder">
+			  	 <button type="button" class="btn btn-primary btn-circle btn-xl">{{secondsToDday}} S</button>
 				  <h2 class="text-center">{{question.question_prompt}}</h2>
-				  
-				  <div class="row justify-content-center">
+				   <div class="row justify-content-center">
 				    
 					<div class="card btn-image" style="background-image: url({{question.pic1url}}) !important;"></div>
-					<div class="card btn-image " style="background-image: url({{question.opurl}}) !important;"></div>
+					<div class="card btn-image" style="background-image: url({{question.opurl}}) !important;"></div>
 					<div class="card btn-image" style="background-image: url({{question.pic2url}}) !important;"></div>
+					
 				 </div>
 				 <br><br>
 				 <div class="row justify-content-center">
-				 	<input #input type="text" class="form-control userinput" 
-				 	placeholder="Type Your Guess" (keyup.enter)="checkAnswer(input.value)" (keydown)="checkText()">	
-				 </div>
-				  <p *ngIf="showCheckAnswerText" class="row justify-content-center text-primary">
-				 	Enter to check your answer.
-				 	</p>
+				 	<input #input type="text" class="form-control userinput" name="useranswer"
+				 	placeholder="Type Your Guess" (keyup)="checkAnswer(input.value)">	
+				
+				<h3 *ngIf="!timerOff" style="margin-top: 20px; font-size: {{size}}em; color: {{color}}; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; transition: all .5s ease;">Time!</h3> 
+				 </div> 
 				 <div *ngIf="correctAnswer === 'correct' " class="row justify-content-center text-success">
 				 	Correct!
 				 </div>
@@ -39,12 +39,14 @@
 		  <input class="btn btn-primary" type="button" value="Back" (click)="prevQuestion()">
 		  </div>
 		<div *ngIf="count != 4">
-			<input class="btn btn-primary" type="reset" value="Save" routerLink="/list">
-			<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()" [disabled]="correctAnswer === ''">
+			<!--<input class="btn btn-primary" type="reset" value="Save" routerLink="/list">-->
+			<input class="btn btn-primary" type="reset" value="Check" (click)="check()" [disabled]="timerOff">
+			<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()">
 		</div>
 		<div *ngIf="count == 4">
+			<input class="btn btn-primary" type="reset" value="Check" (click)="check()" [disabled]="timerOff">
 			<input class="btn btn-primary" type="submit" value="Done" routerLink="/home" 
-			 [queryParams]= "{ type: this.type  }" [disabled]="correctAnswer === ''">
+			 [queryParams]= "{ type: this.type  }">
 		</div>
 		</div>
 		  </div>
