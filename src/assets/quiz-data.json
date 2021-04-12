@@ -109,7 +109,7 @@
                 "op4url": "https://cdn.pixabay.com/photo/2015/09/04/23/04/shibuya-crossing-923000_1280.jpg"
             },
             {
-                "prompt": "What do you like the feeling of the most?",
+                "prompt": "What do you like the feel(touch) of most?",
                 "optionCount": 4,
                 "option1": "Wood",
                 "op1url": "https://cdn.pixabay.com/photo/2016/07/30/20/52/vintage-1557993_1280.jpg",
@@ -139,10 +139,10 @@
                 "op1url": "https://cdn.pixabay.com/photo/2016/11/18/19/55/guitar-1836655_1280.jpg",
                 "option2": "Flute",
                 "op2url": "https://cdn.pixabay.com/photo/2017/08/26/00/29/black-2681948_1280.jpg",
-                "option3": "Tabla",
-                "op3url": "https://cdn.pixabay.com/photo/2015/05/03/18/03/drum-751456_1280.jpg",
-                "option4": "Jal Tarang",
-                "op4url": "https://cdn.pixabay.com/photo/2019/12/01/22/21/sound-4666607_1280.jpg"
+                "option3": "Drums",
+                "op3url": "https://cdn.pixabay.com/photo/2016/11/19/13/57/drum-set-1839383_1280.jpg",
+                "option4": "Piano",
+                "op4url": "https://cdn.pixabay.com/photo/2018/06/29/01/47/piano-3505109_1280.jpg"
             }
         ],
         "result": [
