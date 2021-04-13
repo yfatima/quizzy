@@ -173,7 +173,7 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 	this.secondsToDday = 10;
 	this.timerOff = true;
    }
-   
+
    	prevQuestion() {
 		if ( this.count != 0) {
 			this.count--;
@@ -198,6 +198,13 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 		}
 	}
 	
+	proceedAvailable() {
+		if (this.correctAnswer === "correct" || this.timerOff == false)
+			return true;
+		else
+			return false;
+	}
+
 	private getTimeDifference () {
 		this.secondsToDday = this.secondsToDday - 1;
 		console.log(this.secondsToDday);

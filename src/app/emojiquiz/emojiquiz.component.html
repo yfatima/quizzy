@@ -21,7 +21,7 @@
 				 	<input #input type="text" class="form-control userinput" name="useranswer"
 				 	placeholder="Type Your Guess" (keyup)="checkAnswer(input.value)">	
 				
-				<h3 *ngIf="!timerOff" style="margin-top: 20px; font-size: {{size}}em; color: {{color}}; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; transition: all .5s ease;">Time!</h3> 
+				<h3 *ngIf="!timerOff" style="margin-top: 20px; font-size: {{size}}em; color: {{color}}; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; transition: all .5s ease;">Time! The answer is {{question.correct_answer}}</h3> 
 				 </div> 
 				 <div *ngIf="correctAnswer === 'correct' " class="row justify-content-center text-success">
 				 	Correct!
@@ -40,12 +40,12 @@
 		  </div>
 		<div *ngIf="count != 4">
 			<!--<input class="btn btn-primary" type="reset" value="Save" routerLink="/list">-->
-			<input class="btn btn-primary" type="reset" value="Check" (click)="check()" [disabled]="timerOff">
-			<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()">
+			<input class="btn btn-primary" type="reset" value="Check" (click)="check()">
+			<input class="btn btn-primary" type="button" value="Next" (click)="nextQuestion()" [disabled]="!proceedAvailable()">
 		</div>
 		<div *ngIf="count == 4">
-			<input class="btn btn-primary" type="reset" value="Check" (click)="check()" [disabled]="timerOff">
-			<input class="btn btn-primary" type="submit" value="Done" routerLink="/home" 
+			<input class="btn btn-primary" type="reset" value="Check" (click)="check()">
+			<input class="btn btn-primary" type="submit" value="Done" routerLink="/home" [disabled]="!proceedAvailable()"
 			 [queryParams]= "{ type: this.type  }">
 		</div>
 		</div>
