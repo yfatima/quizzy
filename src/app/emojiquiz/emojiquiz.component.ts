@@ -90,14 +90,14 @@ import { Subscription, interval } from 'rxjs';
 })
 export class EmojiquizComponent implements OnInit, OnDestroy {
 
-  progressPercentage: number = 0;
-  started: boolean = false;
-  questionList: any = [];
-  questions: any = [];
-  type : string = "";
-  count: number = 0;
-  userinput: string = "";
-  correctAnswer: string = "";
+	progressPercentage: number = 0;
+	started: boolean = false;
+	questionList: any = [];
+	questions: any = [];
+	type : string = "";
+	count: number = 0;
+	userinput: string = "";
+	correctAnswer: string = "";
   
 	private subscription: Subscription;
   
@@ -109,7 +109,7 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
     SecondsInAMinute  = 60;
 
     public timeDifference;
-    public secondsToDday = 11;
+    public secondsToDday = 10;
     timerOff: boolean = true;
     size: any = 0.3;
     color: string = "black";
@@ -148,7 +148,7 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
   
   	this.subscription = interval(1000)
     .subscribe(x => { 
-           		if (this.secondsToDday == 1) {
+           		if (this.secondsToDday <= 1) {
            			this.size = 1;
            			this.color = "red";
            		}
@@ -170,7 +170,7 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 	}
 	this.progressPercentage = this.progressPercentage + 20;
 	this.correctAnswer = "";
-	this.secondsToDday = 11;
+	this.secondsToDday = 10;
 	this.timerOff = true;
    }
    
@@ -180,7 +180,7 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 		}
 		this.progressPercentage = this.progressPercentage - 20;
 		this.correctAnswer = "";
-		this.secondsToDday = 11;
+		this.secondsToDday = 10;
 		this.timerOff = true;
 	}
 	
