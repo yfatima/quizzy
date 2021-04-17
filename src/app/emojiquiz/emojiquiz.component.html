@@ -7,7 +7,8 @@
 		  <div *ngFor="let question of questions.questions; let i = index">
 		  <div *ngIf="i == count">
 			  <div class="container border rounded questionborder">
-			  	 <button type="button" class="btn btn-primary btn-circle btn-xl">{{secondsToDday}}</button>
+			  	 <div *ngIf="timerStatus === 'stilltime'" class="btn btn-primary btn-circle btn-xl">{{secondsToDday}}</div>
+			  	 <div *ngIf="timerStatus === 'timeupsoon'" class="btn btn-danger btn-circle btn-xl">{{secondsToDday}}</div>
 				  <h2 class="text-center">{{question.question_prompt}}</h2>
 				   <div class="row justify-content-center">
 				    
@@ -24,10 +25,12 @@
 				<h3 *ngIf="!timerOff" style="margin-top: 20px; font-size: {{size}}em; color: {{color}}; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; transition: all .5s ease;">Time! The answer is {{question.correct_answer}}</h3> 
 				 </div> 
 				 <div *ngIf="correctAnswer === 'correct' " class="row justify-content-center text-success">
-				 	Correct!
+				 	<label style="position: absolute;">Correct!</label>
+				 	<iframe src="https://giphy.com/embed/QBC5foQmcOkdq" width="160" height="160" frameBorder="0" class="giphy-embed" style="margin-top: 1rem !important;"></iframe>
 				 </div>
 				 <div *ngIf="correctAnswer === 'wrong' " class="row justify-content-center text-danger">
-				 	Try Again!
+				 	<label style="position: absolute;">Try again!</label>
+				 	<iframe src="https://giphy.com/embed/wFwfQDzwuLKzC" width="160" height="160" frameBorder="0" class="giphy-embed" style="margin-top: 1rem !important;">></iframe>
 				 </div>
 			</div>
 		</div>

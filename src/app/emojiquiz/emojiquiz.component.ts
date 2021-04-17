@@ -28,7 +28,7 @@ import { Subscription, interval } from 'rxjs';
 		color:white;
 		width: 100%;
 		height: 100%;
-		padding: 10%;
+		padding: 5%;
 		font-weight: bold;
 	}
 	
@@ -47,11 +47,6 @@ import { Subscription, interval } from 'rxjs';
 
 	.btn {
 		margin: 2px !important;
-	}
-
-	.picked {
-    	background-color: black;
-    	opacity: 0.5;
 	}	
 	
 	.progbar {
@@ -76,15 +71,15 @@ import { Subscription, interval } from 'rxjs';
   	}
   	
   	.btn-circle.btn-xl {
-            width: 50px;
-            height: 50px;
-            padding: 7px 10px;
-            border-radius: 25px;
-            font-size: 10px;
+            width: 60px;
+            height: 60px;
+            padding-top: 14px;
+            border-radius: 30px;
+            font-size: 20px;
             text-align: center;
             float: right;
         }
-	
+        
 	`
   ]
 })
@@ -109,8 +104,9 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
     SecondsInAMinute  = 60;
 
     public timeDifference;
-    public secondsToDday = 10;
+    public secondsToDday = 30;
     timerOff: boolean = true;
+    timerStatus: string = "stilltime";
     size: any = 0.3;
     color: string = "black";
 
@@ -170,8 +166,9 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 	}
 	this.progressPercentage = this.progressPercentage + 20;
 	this.correctAnswer = "";
-	this.secondsToDday = 10;
+	this.secondsToDday = 30;
 	this.timerOff = true;
+	this.timerStatus = "stilltime";
    }
 
    	prevQuestion() {
@@ -180,8 +177,9 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 		}
 		this.progressPercentage = this.progressPercentage - 20;
 		this.correctAnswer = "";
-		this.secondsToDday = 10;
+		this.secondsToDday = 30;
 		this.timerOff = true;
+		this.timerStatus = "stilltime";
 	}
 	
 	checkAnswer(value: string) {
@@ -211,7 +209,10 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 		if (this.secondsToDday == 0) {
 			this.timerOff = false;
 		}
-		console.log(this.timerOff);
+		if (this.secondsToDday == 5) {
+			this.timerStatus = "timeupsoon";
+		}
+		console.log(this.timerStatus);
 
 		
         //this.timeDifference = this.dDay.getTime() - new  Date().getTime();
