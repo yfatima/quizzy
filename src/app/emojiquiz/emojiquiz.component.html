@@ -48,8 +48,8 @@
 		</div>
 		<div *ngIf="count == 4">
 			<input class="btn btn-primary" type="reset" value="Check" (click)="check()">
-			<input class="btn btn-primary" type="submit" value="Done" routerLink="/home" [disabled]="!proceedAvailable()"
-			 [queryParams]= "{ type: this.type  }">
+			<input class="btn btn-primary" type="submit" value="Done" routerLink="/emojiresult" [disabled]="!proceedAvailable()"
+			 [queryParams]= "{ type: this.userAnswers }">
 		</div>
 		</div>
 		  </div>

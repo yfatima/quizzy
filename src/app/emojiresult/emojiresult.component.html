@@ -1,0 +1,33 @@
+<div class="result">
+<div class="container">
+			  <ul style="padding-top: 20px;">
+					  <h2 class="text-center">Your Quiz Result</h2>
+				<div class="row justify-content-center">
+					<ul>
+					<p>See how well you did on Guess the Food from Emojis</p>
+					</ul>
+				</div>
+				<div class="row justify-content-center">
+					<ul>
+						<h1>{{result}}%</h1>
+					</ul>
+				</div>
+			</ul>
+</div>
+</div>
+<div class="container">
+<div class="row justify-content-center">
+<div style="display: block; width: 80%; height: 30%;">
+  <canvas baseChart
+      [chartType]="chartType"
+      [datasets]="chartDatasets"
+      [labels]="chartLabels"
+      [colors]="chartColors"
+      [options]="pieChartOptions"
+      [legend]="true">
+  </canvas>
+</div>
+</div>
+</div>
+
+
