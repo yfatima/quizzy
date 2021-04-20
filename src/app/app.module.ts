@@ -25,15 +25,14 @@ import { HelpComponent } from './help/help.component';
 
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const config = {
-  apiKey: "AIzaSyC-J8-o3SHMvPDEsNtwtVVk8-Vd85kmGcE",
-  authDomain: "quizzie-v2.firebaseapp.com",
-  databaseURL: "https://quizzie-v2-default-rtdb.firebaseio.com",
-  projectId: "quizzie-v2",
-  storageBucket: "quizzie-v2.appspot.com",
-  messagingSenderId: "34102678861",
-  appId: "1:34102678861:web:59656d986fd25928835304",
-  measurementId: "G-315SR5WZ7Q"
+var config = {
+  apiKey: "AIzaSyCGbhjWc5y-nEZzZiHeWeX45dLIDjKSWJ8",
+  authDomain: "quizzie-v3.firebaseapp.com",
+  projectId: "quizzie-v3",
+  storageBucket: "quizzie-v3.appspot.com",
+  messagingSenderId: "4062812519",
+  appId: "1:4062812519:web:4f06d99ae76169e21cb7c2",
+  measurementId: "G-5EP92LGRMW"
 };
 
 @NgModule({
