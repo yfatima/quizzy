@@ -189,7 +189,7 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 	}
 	
 	check() {
-		if (this.userinput === this.questions.questions[this.count].correct_answer) {
+		if (this.userinput.toLowerCase().trim() === this.questions.questions[this.count].correct_answer) {
 			this.correctAnswer = "correct";
 		}
 		else {
