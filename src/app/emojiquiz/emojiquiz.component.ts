@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
 import { Subscription, interval } from 'rxjs';
 
 @Component({
@@ -8,7 +8,7 @@ import { Subscription, interval } from 'rxjs';
   templateUrl: './emojiquiz.component.html',
   styleUrls: ['./emojiquiz.component.css']
 })
-export class EmojiquizComponent implements OnInit, OnDestroy {
+export class EmojiquizComponent implements OnInit {
 
 	progressPercentage: number = 0;
 	started: boolean = false;
@@ -133,26 +133,20 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 
 	private getTimeDifference () {
 		this.secondsToDday = this.secondsToDday - 1;
-		//console.log(this.secondsToDday);
 		if (this.secondsToDday == 0) {
 			this.timerOff = false;
 		}
 		if (this.secondsToDday == 5) {
 			this.timerStatus = "timeupsoon";
 		}
-		//console.log(this.timerStatus);
-
-		
-        //this.timeDifference = this.dDay.getTime() - new  Date().getTime();
-        //this.allocateTimeUnits(this.timeDifference);
     }
     
     getinput() {
     	return this.userAnswers;
     }
 
-	ngOnDestroy() {
+	/*ngOnDestroy() {
      this.subscription.unsubscribe();
-    }
+    }*/
 
 }
