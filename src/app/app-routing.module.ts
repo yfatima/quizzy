@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ResultComponent } from './result/result.component';
 import { SignupComponent } from './signup/signup.component';
 import { EmojiquizComponent } from './emojiquiz/emojiquiz.component';
+import { EmojiresultComponent } from './emojiresult/emojiresult.component';
 import { HelpComponent }  from './help/help.component';
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path:'login', component: LoginComponent},
   { path:'signup', component: SignupComponent},
   { path:'emojiquiz', component: EmojiquizComponent},
+  { path:'emojiresult', component: EmojiresultComponent},
   { path:'help', component: HelpComponent}
 ];
 

@@ -22,6 +22,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { EmojiquizComponent } from './emojiquiz/emojiquiz.component';
 import { HelpComponent } from './help/help.component';
+import { EmojiresultComponent } from './emojiresult/emojiresult.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -47,7 +49,8 @@ var config = {
     ResultComponent,
     SignupComponent,
     EmojiquizComponent,
-    HelpComponent
+    HelpComponent,
+    EmojiresultComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ var config = {
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

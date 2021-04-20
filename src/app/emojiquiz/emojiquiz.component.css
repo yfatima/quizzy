@@ -1,7 +1,7 @@
-.quiz-location{
-    margin-top: 3%;
-    margin-left: 2%;
-    color: rgb(71, 71, 71);
+    .quiz-location{
+        margin-top: 3%;
+        margin-left: 2%;
+        color: rgb(71, 71, 71);
 	}
 	.quiz-location > strong > a{
 		color: rgb(0, 98, 255);
@@ -12,8 +12,7 @@
 		color: rgb(0, 59, 153);
 		text-decoration: none;
 	}
-
- 	.btn-image {
+	.btn-image {
     	width: 15rem; 
    	 	height: 15rem;
    		margin: 0.5rem;
@@ -33,7 +32,7 @@
 		color:white;
 		width: 100%;
 		height: 100%;
-		padding: 10%;
+		padding: 5%;
 		font-weight: bold;
 	}
 	
@@ -52,15 +51,10 @@
 
 	.btn {
 		margin: 2px !important;
-	}
-
-	.picked {
-    	background-color: black;
-    	opacity: 0.5;
 	}	
 	
 	.progbar {
-		margin-top: 1%;
+		margin-top: 5%;
 		margin-bottom: 2%;
 	}
 	
@@ -81,12 +75,12 @@
   	}
   	
   	.btn-circle.btn-xl {
-            width: 50px;
-            height: 50px;
-            padding: 7px 10px;
-            border-radius: 25px;
-            font-size: 10px;
+            width: 60px;
+            height: 60px;
+            padding-top: 14px;
+            border-radius: 30px;
+            font-size: 20px;
             text-align: center;
             float: right;
         }
-	
+        

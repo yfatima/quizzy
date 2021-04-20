@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { ActivatedRoute } from '@angular/router';
 import { Subscription, interval } from 'rxjs';
@@ -18,6 +18,7 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 	count: number = 0;
 	userinput: string = "";
 	correctAnswer: string = "";
+	userAnswers: any = ["default", "default", "default", "default", "default"];
   
 	private subscription: Subscription;
   
@@ -29,8 +30,9 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
     SecondsInAMinute  = 60;
 
     public timeDifference;
-    public secondsToDday = 10;
+    public secondsToDday = 30;
     timerOff: boolean = true;
+    timerStatus: string = "stilltime";
     size: any = 0.3;
     color: string = "black";
 
@@ -90,8 +92,9 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 	}
 	this.progressPercentage = this.progressPercentage + 20;
 	this.correctAnswer = "";
-	this.secondsToDday = 10;
+	this.secondsToDday = 30;
 	this.timerOff = true;
+	this.timerStatus = "stilltime";
    }
 
    	prevQuestion() {
@@ -100,8 +103,9 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 		}
 		this.progressPercentage = this.progressPercentage - 20;
 		this.correctAnswer = "";
-		this.secondsToDday = 10;
+		this.secondsToDday = 30;
 		this.timerOff = true;
+		this.timerStatus = "stilltime";
 	}
 	
 	checkAnswer(value: string) {
@@ -109,13 +113,15 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 	}
 	
 	check() {
-		if (this.userinput === this.questions.questions[this.count].correct_answer) {
+		if (this.userinput.toLowerCase().trim() === this.questions.questions[this.count].correct_answer) {
 			this.correctAnswer = "correct";
 		}
 		else {
-			this.userinput = "error";
+			this.userinput = "incorrect";
 			this.correctAnswer = "wrong";
 		}
+		this.userAnswers[this.count] = this.userinput;
+		console.log(this.userAnswers);
 	}
 	
 	proceedAvailable() {
@@ -127,15 +133,22 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 
 	private getTimeDifference () {
 		this.secondsToDday = this.secondsToDday - 1;
-		console.log(this.secondsToDday);
+		//console.log(this.secondsToDday);
 		if (this.secondsToDday == 0) {
 			this.timerOff = false;
 		}
-		console.log(this.timerOff);
+		if (this.secondsToDday == 5) {
+			this.timerStatus = "timeupsoon";
+		}
+		//console.log(this.timerStatus);
 
 		
         //this.timeDifference = this.dDay.getTime() - new  Date().getTime();
         //this.allocateTimeUnits(this.timeDifference);
+    }
+    
+    getinput() {
+    	return this.userAnswers;
     }
 
 	ngOnDestroy() {
