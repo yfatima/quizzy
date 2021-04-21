@@ -1,14 +1,16 @@
-import { Component, OnInit, OnDestroy} from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, AfterViewChecked} from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { ActivatedRoute } from '@angular/router';
 import { Subscription, interval } from 'rxjs';
+import 'bootstrap';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-emojiquiz',
   templateUrl: './emojiquiz.component.html',
   styleUrls: ['./emojiquiz.component.css']
 })
-export class EmojiquizComponent implements OnInit, OnDestroy {
+export class EmojiquizComponent implements OnInit, OnDestroy, AfterViewChecked {
 
 	progressPercentage: number = 0;
 	started: boolean = false;
@@ -42,27 +44,35 @@ export class EmojiquizComponent implements OnInit, OnDestroy {
 			private route: ActivatedRoute
   ) { }
 
-  ngOnInit(): void {
-  
-		this.httpClient.get("assets/emojiquiz-data.json").subscribe(data =>{
-			this.questionList = data;
+	ngAfterViewChecked(): void{
+		$('[data-toggle="tooltip"]').tooltip();
+	}
 
-			// get the type of quiz we are looking for
-			// this.route.queryParams.subscribe(params => {
+	
+  ngOnInit(): void {
+	
+
+	this.httpClient.get("assets/emojiquiz-data.json").subscribe(data =>{
+		this.questionList = data;
+
+		// get the type of quiz we are looking for
+		// this.route.queryParams.subscribe(params => {
 // 				this.type = params["type"];
 // 			})
 // 			
-			//this.type = "Guess Food By Emoji";
-			this.route.queryParams.subscribe(params => {
-				this.type = params["type2"];
-			})
-			
-			for (let id in this.questionList){
-				if(this.questionList[id].type == this.type){
-					this.questions = this.questionList[id]
-				}
+		//this.type = "Guess Food By Emoji";
+		this.route.queryParams.subscribe(params => {
+			this.type = params["type2"];
+		})
+		
+		for (let id in this.questionList){
+			if(this.questionList[id].type == this.type){
+				this.questions = this.questionList[id]
 			}
-		});  
+		}
+	});  
+
+		
 
   }
   

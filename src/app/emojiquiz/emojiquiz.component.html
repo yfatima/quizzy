@@ -23,9 +23,11 @@
 				 </div>
 				 <br><br>
 				 <div class="row justify-content-center">
-				 	<input #input type="text" class="form-control userinput" name="useranswer"
-				 	placeholder="Type Your Guess" (keyup)="checkAnswer(input.value)">	
-				
+						<input #input type="text" class="form-control userinput" name="useranswer"
+						placeholder="Type Your Guess" (keyup)="checkAnswer(input.value)">
+					
+						<i class="bi-question-circle" data-toggle="tooltip" title="Hint: {{question.hint}}"></i>
+
 				<h3 *ngIf="!timerOff" style="margin-top: 20px; font-size: {{size}}em; color: {{color}}; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; transition: all .5s ease;">Time! The answer is {{question.correct_answer}}</h3> 
 				 </div> 
 				 <div *ngIf="correctAnswer === 'correct' " class="row justify-content-center text-success">

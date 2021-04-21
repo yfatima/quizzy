@@ -7,6 +7,7 @@
         "questions": [
             {
                 "question_prompt": "Guess The Food",
+                "hint": "Breakfast",
                 "picCount": 3,
                 "pic1": "pan",
                 "pic1url": "https://cdn.pixabay.com/photo/2016/04/01/12/21/cooking-1300675_1280.png",
@@ -19,6 +20,7 @@
              {
                 "question_prompt": "Guess The Food",
                 "picCount": 3,
+                "hint": "Has a sheet of paper inside",
                 "pic1": "fortune globe",
                 "pic1url": "https://cdn-0.emojis.wiki/emoji-pics/microsoft/crystal-ball-microsoft.png",
                 "pic2": "cookie",
@@ -30,6 +32,7 @@
              {
                 "question_prompt": "Guess The Food",
                 "picCount": 3,
+                "hint": "Can be bought at a stand",
                 "pic1": "hot",
                 "pic1url": "https://images.emojiterra.com/google/android-11/512px/1f525.png",
                 "pic2": "dog",
@@ -41,6 +44,7 @@
             {
                 "question_prompt": "Guess The Food",
                 "picCount": 3,
+                "hint": "Fruit",
                 "pic1": "pine",
                 "pic1url": "https://images.emojiterra.com/twitter/512px/1f332.png",
                 "pic2": "apple",
@@ -52,6 +56,7 @@
              {
                 "question_prompt": "Guess The Food",
                 "picCount": 3,
+                "hint": "Mixed drink",
                 "pic1": "milk",
                 "pic1url": "https://img.icons8.com/emoji/452/glass-of-milk.png",
                 "pic2": "shake",
