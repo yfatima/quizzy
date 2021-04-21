@@ -1,9 +1,9 @@
 {
   "targets": {
-    "quizzie-v3": {
+    "quizzie-v4": {
       "hosting": {
         "quizzy": [
-          "quizzie-v3"
+          "quizzie-v4"
         ]
       }
     }

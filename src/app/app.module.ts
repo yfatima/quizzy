@@ -27,14 +27,14 @@ import { ChartsModule } from 'ng2-charts';
 
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-var config = {
-  apiKey: "AIzaSyCGbhjWc5y-nEZzZiHeWeX45dLIDjKSWJ8",
-  authDomain: "quizzie-v3.firebaseapp.com",
-  projectId: "quizzie-v3",
-  storageBucket: "quizzie-v3.appspot.com",
-  messagingSenderId: "4062812519",
-  appId: "1:4062812519:web:4f06d99ae76169e21cb7c2",
-  measurementId: "G-5EP92LGRMW"
+const config = {
+  apiKey: "AIzaSyAngHVsh2ZXWIfC3jLfNlkHGyggGB-tySM",
+  authDomain: "quizzie-v4.firebaseapp.com",
+  projectId: "quizzie-v4",
+  storageBucket: "quizzie-v4.appspot.com",
+  messagingSenderId: "1026726533867",
+  appId: "1:1026726533867:web:5e39cb890e174f72bffcae",
+  measurementId: "G-4X18D6X495"
 };
 
 @NgModule({
