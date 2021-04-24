@@ -24,7 +24,7 @@
                 "pic1": "fortune globe",
                 "pic1url": "https://cdn-0.emojis.wiki/emoji-pics/microsoft/crystal-ball-microsoft.png",
                 "pic2": "cookie",
-                "pic2url": "https://wprock.fr/wp-content/themes/wprock-theme/img/emoji/joypixels/512/1f36a.png",
+                "pic2url": "http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cookie.png",
                 "operatorpic": "plus",
                 "opurl": "https://hotemoji.com/images/dl/d/heavy-plus-sign-emoji-by-twitter.png",
             	"correct_answer": "fortune cookie"
